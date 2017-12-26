@@ -16,4 +16,4 @@ class GetListOfNeo
 end
 
 x = GetListOfNeo.new
-puts x.get_list_of_neo('1','1')
+puts x.get_list_of_neo('2','10')
