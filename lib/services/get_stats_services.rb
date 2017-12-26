@@ -1,7 +1,7 @@
 require 'httparty'
 require 'json'
 
-class GetNeoToday
+class GetStats
   include HTTParty
 
   base_uri 'https://api.nasa.gov/neo'
@@ -10,12 +10,12 @@ class GetNeoToday
     @apiKey = "jGx3T69k38ueDfGl1kK2i1haHghETqwSfJwGShyr"
   end
 
-  def get_neo_today
-    @a_specific_neo =JSON.parse(self.class.get("/rest/v1/feed/today?detailed=true&api_key=#{@apiKey}").body)
+  def get_stats
+    @stats =JSON.parse(self.class.get("/rest/v1/stats?api_key=#{@apiKey}").body)
   end
 
 end
 
-x = GetNeoToday.new
+x = GetStats.new
 
-puts x.get_neo_today
+puts x.get_stats
