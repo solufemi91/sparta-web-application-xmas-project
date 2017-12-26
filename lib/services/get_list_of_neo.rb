@@ -7,7 +7,7 @@ class GetListOfNeo
   base_uri 'https://api.nasa.gov/neo'
 
   def initialize
-    @apiKey = "DEMO_KEY"
+    @apiKey = "jGx3T69k38ueDfGl1kK2i1haHghETqwSfJwGShyr"
   end
 
   def get_list_of_neo(page,size)
