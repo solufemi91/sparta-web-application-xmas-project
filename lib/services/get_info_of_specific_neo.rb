@@ -15,5 +15,6 @@ class GetInfoOfSpecificNeo
   end
 
 end
+
 x = GetInfoOfSpecificNeo.new
 puts x.get_info_of_specific_neo('3729835')
