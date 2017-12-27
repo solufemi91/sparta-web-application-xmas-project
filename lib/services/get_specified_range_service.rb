@@ -11,7 +11,7 @@ class GetSpecifiedRange
   end
 
   def get_specified_range(start_date,end_date)
-    @a_list_of_neo =JSON.parse(self.class.get("/rest/v1/feed?start_date=#{start_date}&end_date=#{end_date}&detailed=true&api_key=#{@apiKey}").body)
+    @a_list_of_neo =JSON.parse(self.class.get("/rest/v1/feed?start_date=#{start_date}&end_date=#{end_date}&api_key=#{@apiKey}").body)
   end
 
 end
