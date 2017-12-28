@@ -4,10 +4,8 @@ describe Nasa_api do
   context 'For the get_lookup service' do
 
     before(:all) do
-      # @lookup = GetLookup.new
       @lookup = Nasa_api.new.lookup_service
       @results = @lookup.get_info_of_specific_neo('3729835')
-
     end
 
     it "I expect the results to be a hash" do
