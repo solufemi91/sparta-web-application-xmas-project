@@ -117,45 +117,85 @@ class GetLookup
     @my_array
   end
   #
-  # def get_CA_INDEX1_relative_velocity
-  #   get_close_approach_data_key_value['relative_velocity']
-  # end
+  def get_all_relative_velocities
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['relative_velocity'])
+    end
+    @my_array
+  end
   #
-  # def get_CA_INDEX1_relative_velocity_kps
-  #   get_CA_INDEX1_relative_velocity['kilometers_per_second']
-  # end
+  def get_all_relative_velocity_kps
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['relative_velocity']['kilometers_per_second'])
+    end
+    @my_array
+  end
   #
-  # def get_CA_INDEX1_relative_velocity_kph
-  #   get_CA_INDEX1_relative_velocity['kilometers_per_hour']
-  # end
+  def get_all_relative_velocity_kphs
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['relative_velocity']['kilometers_per_hour'])
+    end
+    @my_array
+  end
   #
-  # def get_CA_INDEX1_relative_velocity_mph
-  #   get_CA_INDEX1_relative_velocity['miles_per_hour']
-  # end
+  def get_all_relative_velocity_mphs
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['relative_velocity']['miles_per_hour'])
+    end
+    @my_array
+  end
   #
-  # def get_CA_INDEX1_miss_distance
-  #   get_close_approach_data_key_value['miss_distance']
-  # end
+  def get_all_miss_distances
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['miss_distance'])
+    end
+    @my_array
+  end
   #
-  # def get_CA_INDEX1_miss_distance_astronomical
-  #   get_CA_INDEX1_miss_distance['astronomical']
-  # end
+  def get_all_miss_distance_astronomicals
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['miss_distance']['astronomical'])
+    end
+    @my_array
+  end
   #
-  # def get_CA_INDEX1_miss_distance_lunar
-  #   get_CA_INDEX1_miss_distance['lunar']
-  # end
+  def get_all_miss_distance_lunars
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['miss_distance']['lunar'])
+    end
+    @my_array
+  end
   #
-  # def get_CA_INDEX1_miss_distance_kilometers
-  #   get_CA_INDEX1_miss_distance['kilometers']
-  # end
+  def get_all_miss_distance_kilometers
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['miss_distance']['kilometers'])
+    end
+    @my_array
+  end
+
+  def get_all_miss_distance_miles
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['miss_distance']['miles'])
+    end
+    @my_array
+  end
   #
-  # def get_CA_INDEX1_miss_distance_miles
-  #   get_CA_INDEX1_miss_distance['miles']
-  # end
-  #
-  # def get_CA_INDEX1_orbiting_body
-  #   get_close_approach_data_key_value['orbiting_body']
-  # end
+  def get_all_orbiting_bodies
+    @my_array = []
+    get_close_approach_data_key_value.each do |element|
+      @my_array.push(element['orbiting_body'])
+    end
+    @my_array
+  end
 
 
 
@@ -169,4 +209,4 @@ x = GetLookup.new
 x.get_info_of_specific_neo('3729835')
 
 
-puts x.get_all_epoch_date_close_approaches
+puts x.get_all_orbiting_bodies
