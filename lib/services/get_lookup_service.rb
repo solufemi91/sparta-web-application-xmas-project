@@ -95,8 +95,7 @@ class GetLookup
   end
 
   def get_close_approach_data_key_value
-   @results['close_approach_data']
-  #  @results['close_approach_data'][0]
+    @results['close_approach_data']
   end
 
   def get_all_close_approach_dates
@@ -197,10 +196,81 @@ class GetLookup
     @my_array
   end
 
+  def get_orbital_data_key_value
+    @results['orbital_data']
+  end
 
+  def get_orbit_id
+    get_orbital_data_key_value['orbit_id']
+  end
 
+  def get_orbit_determination_date
+    get_orbital_data_key_value['orbit_determination_date']
+  end
 
+  def get_orbit_uncertainty
+    get_orbital_data_key_value['orbit_uncertainty']
+  end
 
+  def get_minimum_orbit_intersection
+    get_orbital_data_key_value['minimum_orbit_intersection']
+  end
+
+  def get_jupiter_tisserand_invariant
+    get_orbital_data_key_value['jupiter_tisserand_invariant']
+  end
+
+  def get_epoch_osculation
+    get_orbital_data_key_value['epoch_osculation']
+  end
+
+  def get_eccentricity
+    get_orbital_data_key_value['eccentricity']
+  end
+
+  def get_semi_major_axis
+    get_orbital_data_key_value['semi_major_axis']
+  end
+
+  def get_inclination
+    get_orbital_data_key_value['inclination']
+  end
+
+  def get_ascending_node_longitude
+    get_orbital_data_key_value['ascending_node_longitude']
+  end
+
+  def get_orbital_period
+    get_orbital_data_key_value['orbital_period']
+  end
+
+  def get_perihelion_distance
+    get_orbital_data_key_value['perihelion_distance']
+  end
+
+  def get_perihelion_argument
+    get_orbital_data_key_value['perihelion_argument']
+  end
+
+  def get_aphelion_distance
+    get_orbital_data_key_value['aphelion_distance']
+  end
+
+  def get_perihelion_time
+    get_orbital_data_key_value['perihelion_time']
+  end
+
+  def get_mean_anomaly
+    get_orbital_data_key_value['mean_anomaly']
+  end
+
+  def get_mean_motion
+    get_orbital_data_key_value['mean_motion']
+  end
+
+  def get_equinox
+    get_orbital_data_key_value['equinox']
+  end
 
 
 end
@@ -209,4 +279,4 @@ x = GetLookup.new
 x.get_info_of_specific_neo('3729835')
 
 
-puts x.get_all_orbiting_bodies
+puts x.get_equinox
