@@ -76,5 +76,12 @@ describe GetLookup do
       expect(@x.get_is_potentially_hazardous_asteroid_key_value).to be(true).or be(false)
     end
 
+    # it "i expect the close_approach_date for each element in the close_approach_data to be a string" do
+    #   @x.get_close_approach_data_key_value.each do |element|
+    #
+    #     puts element
+    #   end
+    # end
+
   end
 end
