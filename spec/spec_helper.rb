@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../lib/services/get_lookup_service'
+require_relative '../lib/nasa_api'
 
 
 RSpec.configure do |config|
