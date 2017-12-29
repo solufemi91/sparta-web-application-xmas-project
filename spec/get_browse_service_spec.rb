@@ -9,7 +9,7 @@ describe Nasa_api do
     end
 
     it "I expect the results to be a hash" do
-
+      expect(@results).to be_kind_of(Hash)
     end
 
 

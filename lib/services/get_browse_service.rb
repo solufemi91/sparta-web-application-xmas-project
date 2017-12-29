@@ -18,6 +18,14 @@ class GetListOfNeo
    @results['links']
   end
 
+  def get_next
+    get_main_links['next']
+  end
+
+  def get_self
+    get_main_links['self']
+  end
+
   def get_page
    @results['page']
   end
@@ -472,8 +480,9 @@ class GetListOfNeo
 
 end
 
-# x = GetListOfNeo.new
-#  x.get_list_of_neo
+x = GetListOfNeo.new
+ x.get_list_of_neo
+ puts x.get_self
 # # puts x.get_neo_reference_id_key_value
 # # puts x.get_close_approach_data_key_value
 # puts x.get_equinoxes
