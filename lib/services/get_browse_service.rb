@@ -30,6 +30,22 @@ class GetListOfNeo
    @results['page']
   end
 
+  def get_page_size
+    get_page['size']
+  end
+
+  def get_page_total_elements
+    get_page['total_elements']
+  end
+
+  def get_page_total_pages
+    get_page['total_pages']
+  end
+
+  def get_page_number
+    get_page['number']
+  end
+
   def get_near_earth_objects
    @results['near_earth_objects']
   end
@@ -482,7 +498,7 @@ end
 
 x = GetListOfNeo.new
  x.get_list_of_neo
- puts x.get_self
+ puts x.get_page_size
 # # puts x.get_neo_reference_id_key_value
 # # puts x.get_close_approach_data_key_value
 # puts x.get_equinoxes
