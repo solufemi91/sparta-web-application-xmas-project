@@ -28,6 +28,27 @@ describe Nasa_api do
       expect(@browse.get_page).to be_kind_of(Hash)
     end
 
+    it "I expect the page_size key to return an Integer" do
+      expect(@browse.get_page_size).to be_kind_of(Integer)
+    end
+
+    it "I expect the page_total_elements key to return an Integer" do
+      expect(@browse.get_page_total_elements).to be_kind_of(Integer)
+    end
+
+    it "I expect the page_total_pages key to return an Integer" do
+      expect(@browse.get_page_total_pages).to be_kind_of(Integer)
+    end
+
+    it "I expect the page_number key to return an Integer" do
+      expect(@browse.get_page_number).to be_kind_of(Integer)
+    end
+
+    it "I expect the parent links key to return a array" do
+      expect(@browse.get_near_earth_objects).to be_kind_of(Array)
+    end
+
+
 
 
 
