@@ -31,7 +31,6 @@ describe Nasa_api do
 
     it "I expect the value of the nasa_jpl_url key to be a web address" do
       expect(@lookup.get_nasa_jpl_url_key_value).to start_with("http")
-
     end
 
 
