@@ -1,6 +1,7 @@
 require_relative 'services/get_lookup_service'
 require_relative 'services/get_browse_service'
 require_relative 'services/get_feed_service'
+require_relative 'random/random_asteroid_id'
 
 class Nasa_api
 
@@ -14,6 +15,10 @@ class Nasa_api
 
   def feed_service
     GetSpecifiedRange.new
+  end
+
+  def random_asteroid
+    RandomAsteroidId.new
   end
 
 end

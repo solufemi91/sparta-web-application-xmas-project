@@ -5,6 +5,8 @@ describe Nasa_api do
 
     before(:all) do
       @lookup = Nasa_api.new.lookup_service
+      @id = Nasa_api.new.random_asteroid
+      @id.get_random_asteroid_by_id
       @results = @lookup.get_info_of_specific_neo('3729835')
     end
 
