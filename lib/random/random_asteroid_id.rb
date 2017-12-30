@@ -10,5 +10,5 @@ class RandomAsteroidId
 
 end
 
-x = RandomAsteroidId.new
-puts x.get_random_asteroid_by_id
+# x = RandomAsteroidId.new
+# puts x.get_random_asteroid_by_id
