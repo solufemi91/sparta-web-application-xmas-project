@@ -44,7 +44,7 @@ describe Nasa_api do
       expect(@browse.get_page_number).to be_kind_of(Integer)
     end
 
-    it "I expect the parent links key to return a array" do
+    it "I expect the child links key to return a array" do
       expect(@browse.get_near_earth_objects).to be_kind_of(Array)
     end
 

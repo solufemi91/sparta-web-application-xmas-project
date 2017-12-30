@@ -91,80 +91,80 @@ class GetSpecifiedRange
     template('links')
   end
 
-  def get_all_links_self_key_values
+  def get_all_links_self_key_value
     template2('links','self')
   end
 
-  def get_all_neo_reference_id_key_values
+  def get_all_neo_reference_id_key_value
     template('neo_reference_id')
   end
 
-  def get_all_name_key_values
+  def get_all_name_key_value
     template('name')
   end
 
 
-  def get_nasa_jpl_url_key_values
+  def get_nasa_jpl_url_key_value
     template('nasa_jpl_url')
   end
 
-  def get_absolute_magnitude_h_key_values
+  def get_absolute_magnitude_h_key_value
     template('absolute_magnitude_h')
   end
 
-  def get_estimated_diameter_key_values
+  def get_estimated_diameter_key_value
     template('estimated_diameter')
   end
 
-  def get_estimated_diameter_kilometers_key_values
+  def get_estimated_diameter_kilometers_key_value
     template2('estimated_diameter','kilometers')
   end
 
-  def get_estimated_diameter_kilometers_min_key_values
+  def get_estimated_diameter_kilometers_min_key_value
     template3('estimated_diameter','kilometers','estimated_diameter_min')
   end
 
-  def get_estimated_diameter_kilometers_max_key_values
+  def get_estimated_diameter_kilometers_max_key_value
     template3('estimated_diameter','kilometers','estimated_diameter_max')
   end
 
-  def get_estimated_diameter_meters_key_values
+  def get_estimated_diameter_meters_key_value
     template2('estimated_diameter','meters')
   end
 
-  def get_estimated_diameter_meters_min_key_values
+  def get_estimated_diameter_meters_min_key_value
     template3('estimated_diameter','meters','estimated_diameter_min')
   end
 
-  def get_estimated_diameter_meters_max_key_values
+  def get_estimated_diameter_meters_max_key_value
     template3('estimated_diameter','meters','estimated_diameter_max')
   end
 
-  def get_estimated_diameter_miles_key_values
+  def get_estimated_diameter_miles_key_value
     template3('estimated_diameter','miles','estimated_diameter_min')
   end
 
-  def get_estimated_diameter_miles_max_key_values
+  def get_estimated_diameter_miles_max_key_value
     template3('estimated_diameter','miles','estimated_diameter_max')
   end
 
-  def get_estimated_diameter_feet_key_values
+  def get_estimated_diameter_feet_key_value
     template2('estimated_diameter','feet')
   end
 
-  def get_estimated_diameter_feet_min_key_values
+  def get_estimated_diameter_feet_min_key_value
     template3('estimated_diameter','feet','estimated_diameter_min')
   end
 
-  def get_estimated_diameter_feet_max_key_values
+  def get_estimated_diameter_feet_max_key_value
     template3('estimated_diameter','feet','estimated_diameter_max')
   end
 
-  def get_is_potentially_hazardous_asteroid_key_values
+  def get_is_potentially_hazardous_asteroid_key_value
     template('is_potentially_hazardous_asteroid')
   end
 
-  def get_close_approach_data_key_values
+  def get_close_approach_data_key_value
     template('close_approach_data')
   end
 
@@ -185,7 +185,6 @@ class GetSpecifiedRange
     template4('close_approach_data',0,'relative_velocity','kilometers_per_second')
 
   end
-
 
   def get_all_relative_velocity_kphs
     template4('close_approach_data',0,'relative_velocity','kilometers_per_hour')
@@ -211,20 +210,16 @@ class GetSpecifiedRange
     template4('close_approach_data',0,'miss_distance','miles')
   end
 
+  def get_all_miss_distance_kilometers
+    template4('close_approach_data',0,'miss_distance','kilometers')
+  end
+
   def get_all_orbiting_bodies
     template3('close_approach_data',0,'orbiting_body')
   end
 
-
-
-
-
-
-
-
-
 end
 
-x = GetSpecifiedRange.new
-x.get_specified_range('2015-09-08','2015-09-07')
-puts x.get_all_orbiting_bodies
+# x = GetSpecifiedRange.new
+# x.get_specified_range('2015-09-08','2015-09-07')
+# puts x.get_all_orbiting_bodies
