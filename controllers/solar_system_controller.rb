@@ -8,22 +8,24 @@ class SolarSystemController < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  id = 0
+
   get '/' do
+    erb :'solar_system_objects/index'
+  end
 
-  # Page title
-  @title = "Blog posts"
-  erb :'solar_system_objects/index'
-
+  get '/results' do
+    @title = "Results"
+    @lookup = GetLookup.new
+    @results = @lookup.get_info_of_specific_neo(id)
+    erb :'solar_system_objects/results'
   end
 
 
 
   post '/' do
     id = params[:title]
-    lookup = GetLookup.new
-    puts lookup.get_info_of_specific_neo(id)
-
-    redirect "/"
+    redirect "/results"
   end
 
 

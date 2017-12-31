@@ -1,0 +1,14 @@
+<h1>results</h1>
+
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Values</th>
+  </tr>
+  <% keys = @results.keys %>
+  <% keys.each do |attribute| %>
+  <tr>
+    <td><%= attribute %></td>
+  </tr>
+  <% end %>
+</table>
