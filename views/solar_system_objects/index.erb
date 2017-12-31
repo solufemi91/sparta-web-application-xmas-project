@@ -1,4 +1,4 @@
 <h1>Hello</h1>
-
-
-<p><%= @posts %></p>
+<% @posts.each do |post| %>
+<h3><a href="<%= post %>"><%= post %></a></h3>
+<% end %>
