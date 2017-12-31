@@ -12,6 +12,10 @@ class SolarSystemController < Sinatra::Base
 
   # Page title
   @title = "Blog posts"
+  @apidata = GetListOfNeo.new
+  @apidata.get_list_of_neo
+  @posts = @apidata.get_next
+
 
   # @posts = Post.all
 
