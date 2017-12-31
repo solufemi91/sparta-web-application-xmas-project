@@ -275,5 +275,5 @@ class GetLookup
 
 end
 
-x = GetLookup.new
- puts x.get_info_of_specific_neo('2153306')
+# x = GetLookup.new
+#  puts x.get_info_of_specific_neo('2153306')
