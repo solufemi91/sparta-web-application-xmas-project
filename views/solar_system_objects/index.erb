@@ -1,4 +1,12 @@
-<h1>Hello</h1>
-<% @posts.each do |post| %>
-<h3><a href="<%= post %>"><%= post %></a></h3>
-<% end %>
+<h1>My Solar System Website</h1>
+
+<form action="/" method="POST">
+  <div>
+    <label>Astroid Id</label>
+    <input type="text" name="title" placeholder="Enter an asteroid id" value=" ">
+  </div>
+  <div>
+    <input type="submit" value="Save Post">
+  </div>
+
+</form>

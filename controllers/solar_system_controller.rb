@@ -12,15 +12,7 @@ class SolarSystemController < Sinatra::Base
 
   # Page title
   @title = "Blog posts"
-  @apidata = GetListOfNeo.new
-  @apidata.get_list_of_neo
-  @posts = @apidata.get_links_self_key_value
-
-
-
-
-  # @posts = Post.all
-
+  
   erb :'solar_system_objects/index'
 
   end
