@@ -20,16 +20,26 @@ class SolarSystemController < Sinatra::Base
     @title = "Results"
     @lookup = GetLookup.new
     @results = @lookup.get_info_of_specific_neo(id)
-    erb :'solar_system_objects/results'
+    erb :'solar_system_objects/lookup'
   end
 
   get '/results/feed' do
-    @title = "feeed"
+    @title = "feed"
     @feed = GetSpecifiedRange.new
     @results = @feed.get_specified_range(startDate,endDate)
     erb :'solar_system_objects/feed'
 
   end
+
+  get '/results/browse' do
+    @title = "Browse"
+    @browse = GetListOfNeo.new
+    @results = @browse.get_list_of_neo
+    erb :'solar_system_objects/browse'
+
+  end
+
+
 
   post '/lookup' do
     id = params[:title]
@@ -40,6 +50,12 @@ class SolarSystemController < Sinatra::Base
     startDate = params[:start]
     endDate = params[:end]
     redirect "/results/feed"
+  end
+
+  post '/browse' do
+    startDate = params[:start]
+    endDate = params[:end]
+    redirect "/results/browse"
   end
 
 
