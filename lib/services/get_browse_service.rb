@@ -496,9 +496,9 @@ class GetListOfNeo
 
 end
 
-# x = GetListOfNeo.new
-#  x.get_list_of_neo
-#  puts x.get_neo_reference_id_key_value
+x = GetListOfNeo.new
+ x.get_list_of_neo
+ puts x.get_neo_reference_id_key_value
 # #  puts x.get_page_size
 # # # # puts x.get_neo_reference_id_key_value
 # # # # puts x.get_close_approach_data_key_value

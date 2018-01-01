@@ -14,7 +14,14 @@ class SolarSystemController < Sinatra::Base
     erb :'solar_system_objects/index'
   end
 
-  get '/results' do
+  get '/results/lookup' do
+    @title = "Results"
+    @lookup = GetLookup.new
+    @results = @lookup.get_info_of_specific_neo(id)
+    erb :'solar_system_objects/results'
+  end
+
+  get '/results/feed' do
     @title = "Results"
     @lookup = GetLookup.new
     @results = @lookup.get_info_of_specific_neo(id)
@@ -25,7 +32,7 @@ class SolarSystemController < Sinatra::Base
 
   post '/' do
     id = params[:title]
-    redirect "/results"
+    redirect "/results/lookup"
   end
 
 

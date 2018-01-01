@@ -1,4 +1,4 @@
-<h1>My Solar System Website</h1>
+<h1>Search for an Asteroid by id</h1>
 
 <form action="/" method="POST">
   <div>
@@ -6,10 +6,25 @@
     <input type="text" name="title" placeholder="Enter an asteroid id" value=" ">
   </div>
   <div>
-    <input type="submit" value="Save Post">
+    <input type="submit" value="Search">
   </div>
 
 </form>
 
-<h1>Blog</h1>
-<%= @results %>
+
+<h1>Search for feed of asteroids</h1>
+
+<form action="/" method="POST">
+  <div>
+    <label>Start Date</label>
+    <input type="text" name="start" placeholder="Enter a start date" value=" ">
+  </div>
+  <div>
+    <label>End Date</label>
+    <input type="text" name="end" placeholder="Enter a end date" value=" ">
+  </div>
+  <div>
+    <input type="submit" value="Search">
+  </div>
+
+</form>
