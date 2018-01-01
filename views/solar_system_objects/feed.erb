@@ -29,6 +29,7 @@
  <% keys = @neo.keys %>
  <% keys.each do |date|%>
  <h1><%= date %></h1>
- <%= @neo[date]%>
-
+ <% @neo[date].each do |singleElement|%>
+    <h3><%= singleElement['neo_reference_id'] %></h3>
+  <% end %>
  <% end %>
