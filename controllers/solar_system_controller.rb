@@ -9,6 +9,8 @@ class SolarSystemController < Sinatra::Base
   end
 
   id = 0
+  startDate = 0
+  endDate = 0
 
   get '/' do
     erb :'solar_system_objects/index'
@@ -22,17 +24,22 @@ class SolarSystemController < Sinatra::Base
   end
 
   get '/results/feed' do
-    @title = "Results"
-    @lookup = GetLookup.new
-    @results = @lookup.get_info_of_specific_neo(id)
-    erb :'solar_system_objects/results'
+    @title = "feeed"
+    @feed = GetSpecifiedRange.new
+    @results = @feed.get_specified_range(startDate,endDate)
+    erb :'solar_system_objects/feed'
+
   end
 
-
-
-  post '/' do
+  post '/lookup' do
     id = params[:title]
     redirect "/results/lookup"
+  end
+
+  post '/feed' do
+    startDate = params[:start]
+    endDate = params[:end]
+    redirect "/results/feed"
   end
 
 
