@@ -23,7 +23,7 @@ class GetSpecifiedRange
   end
 
   def get_previous
-    get_main_links['next']
+    get_main_links['prev']
   end
 
   def get_self
@@ -36,6 +36,12 @@ class GetSpecifiedRange
 
   def get_near_earth_objects
     @results['near_earth_objects']
+  end
+
+  def selectDates
+    @my_array = []
+    @neo = get_near_earth_objects
+    keys = @neo.keys
   end
 
 
@@ -220,6 +226,8 @@ class GetSpecifiedRange
 
 end
 
-# x = GetSpecifiedRange.new
-# x.get_specified_range('2015-09-08','2015-09-07')
+x = GetSpecifiedRange.new
+x.get_specified_range('2015-09-08','2015-09-07')
+puts x.get_all_neo_reference_id_key_value
+# puts x.selectDates
 # puts x.get_all_orbiting_bodies

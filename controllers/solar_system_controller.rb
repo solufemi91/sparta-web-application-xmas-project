@@ -26,7 +26,7 @@ class SolarSystemController < Sinatra::Base
   get '/results/feed' do
     @title = "feed"
     @feed = GetSpecifiedRange.new
-    @results = @feed.get_specified_range(startDate,endDate)
+    @feed.get_specified_range(startDate,endDate)
     erb :'solar_system_objects/feed'
 
   end
@@ -38,7 +38,6 @@ class SolarSystemController < Sinatra::Base
     erb :'solar_system_objects/browse'
 
   end
-
 
 
   post '/lookup' do

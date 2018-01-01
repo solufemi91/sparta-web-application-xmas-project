@@ -6,11 +6,29 @@
     <th>Attribute</th>
     <th>Values</th>
   </tr>
-  <% keys = @results.keys %>
-  <% keys.each do |attribute| %>
   <tr>
-    <td><%= attribute %></td>
-    <td><%= @results[attribute] %></td>
+    <td>links-next</td>
+    <td><%= @feed.get_next %></td>
   </tr>
-  <% end %>
+  <tr>
+    <td>links-previous</td>
+    <td><%= @feed.get_previous %></td>
+  </tr>
+  <tr>
+    <td>links-self</td>
+    <td><%= @feed.get_self %></td>
+  </tr>
+  <tr>
+    <td>element count</td>
+    <td><%= @feed.get_element_count %></td>
+  </tr>
 </table>
+
+ <% @neo = @feed.get_near_earth_objects %>
+
+ <% keys = @neo.keys %>
+ <% keys.each do |date|%>
+ <h1><%= date %></h1>
+ <%= @neo[date]%>
+
+ <% end %>
