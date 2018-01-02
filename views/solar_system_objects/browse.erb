@@ -1,20 +1,5 @@
 <h1>browse</h1>
 
-<!-- <table>
-  <tr>
-    <th>Attribute</th>
-    <th>Values</th>
-  </tr>
-  <% keys = @results.keys %>
-  <% keys.each do |attribute| %>
-  <tr>
-    <td><%= attribute %></td>
-    <td><%= @results[attribute] %></td>
-  </tr>
-  <% end %>
-</table> -->
-
-
 <table>
   <tr>
     <th>Attribute</th>
@@ -49,3 +34,197 @@
     <td><%= @browse.get_page_number %></td>
   </tr>
 </table>
+
+<% @array =  @browse.get_near_earth_objects %>
+<% @array.each do |singleElement| %>
+<h3><%= singleElement['neo_reference_id'] %></h3>
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Values</th>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td><%= singleElement['name']%></td>
+  </tr>
+  <tr>
+    <td>nasa jpl url</td>
+    <td><%= singleElement['nasa_jpl_url']%></td>
+  </tr>
+  <tr>
+    <td>absolute magnitude h</td>
+    <td><%= singleElement['absolute_magnitude_h']%></td>
+  </tr>
+  <tr>
+    <td>estimated minimum diameter in kilometers</td>
+    <td><%= singleElement['estimated_diameter']['kilometers']['estimated_diameter_min']%></td>
+  </tr>
+  <tr>
+    <td>estimated maximum diameter in kilometers</td>
+    <td><%= singleElement['estimated_diameter']['kilometers']['estimated_diameter_max']%></td>
+  </tr>
+  <tr>
+    <td>estimated minimum diameter in meters</td>
+    <td><%= singleElement['estimated_diameter']['meters']['estimated_diameter_min']%></td>
+  </tr>
+  <tr>
+    <td>estimated maximum diameter in meters</td>
+    <td><%= singleElement['estimated_diameter']['meters']['estimated_diameter_max']%></td>
+  </tr>
+  <tr>
+    <td>estimated minimum diameter in miles</td>
+    <td><%= singleElement['estimated_diameter']['miles']['estimated_diameter_min']%></td>
+  </tr>
+  <tr>
+    <td>estimated maximum diameter in miles</td>
+    <td><%= singleElement['estimated_diameter']['miles']['estimated_diameter_max']%></td>
+  </tr>
+  <tr>
+    <td>estimated minimum diameter in feet</td>
+    <td><%= singleElement['estimated_diameter']['feet']['estimated_diameter_min']%></td>
+  </tr>
+  <tr>
+    <td>estimated maximum diameter in feet</td>
+    <td><%= singleElement['estimated_diameter']['feet']['estimated_diameter_max']%></td>
+  </tr>
+  <tr>
+    <td>is potentially hazardous asteroid?</td>
+    <td><%= singleElement['is_potentially_hazardous_asteroid']%></td>
+  </tr>
+  <tr>
+    <td>orbit id</td>
+    <td><%= singleElement['orbital_data']['orbit_id']%></td>
+  </tr>
+  <tr>
+    <td>orbit determination date</td>
+    <td><%= singleElement['orbital_data']['orbit_determination_date']%></td>
+  </tr>
+  <tr>
+    <td>orbit uncertainty</td>
+    <td><%= singleElement['orbital_data']['orbit_uncertainty']%></td>
+  </tr>
+  <tr>
+    <td>minimum orbit intersection</td>
+    <td><%= singleElement['orbital_data']['minimum_orbit_intersection']%></td>
+  </tr>
+  <tr>
+    <td>jupiter tisserand invariant</td>
+    <td><%= singleElement['orbital_data']['jupiter_tisserand_invariant']%></td>
+  </tr>
+  <tr>
+    <td>epoch osculation</td>
+    <td><%= singleElement['orbital_data']['epoch_osculation']%></td>
+  </tr>
+  <tr>
+    <td>eccentricity</td>
+    <td><%= singleElement['orbital_data']['eccentricity']%></td>
+  </tr>
+  <tr>
+    <td>semi major axis</td>
+    <td><%= singleElement['orbital_data']['semi_major_axis']%></td>
+  </tr>
+  <tr>
+    <td>inclination</td>
+    <td><%= singleElement['orbital_data']['inclination']%></td>
+  </tr>
+  <tr>
+    <td>orbital period</td>
+    <td><%= singleElement['orbital_data']['orbital_period']%></td>
+  </tr>
+  <tr>
+    <td>perihelion distance</td>
+    <td><%= singleElement['orbital_data']['perihelion_distance']%></td>
+  </tr>
+  <tr>
+    <td>perihelion argument</td>
+    <td><%= singleElement['orbital_data']['perihelion_argument']%></td>
+  </tr>
+  <tr>
+    <td>aphelion distance</td>
+    <td><%= singleElement['orbital_data']['aphelion_distance']%></td>
+  </tr>
+  <tr>
+    <td>perihelion time</td>
+    <td><%= singleElement['orbital_data']['perihelion_time']%></td>
+  </tr>
+  <tr>
+    <td>mean anomaly</td>
+    <td><%= singleElement['orbital_data']['mean_anomaly']%></td>
+  </tr>
+  <tr>
+    <td>mean motion</td>
+    <td><%= singleElement['orbital_data']['mean_motion']%></td>
+  </tr>
+  <tr>
+    <td>equinox</td>
+    <td><%= singleElement['orbital_data']['equinox']%></td>
+  </tr>
+</table>
+
+<h4>Close approach data for <%= singleElement['neo_reference_id'] %> </h4>
+<table>
+  <tr>
+    <th>attribute</th>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <th>data for <%= element['close_approach_date'] %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <td>epoch date close approach</td>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <td><%= element['epoch_date_close_approach'] %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>relative velocity, kilometers per second</td>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <td><%= element['relative_velocity']['kilometers_per_second'] %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>relative velocity, kilometers per hour</td>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <td><%= element['relative_velocity']['kilometers_per_hour'] %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>relative velocity, miles per hour</td>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <td><%= element['relative_velocity']['miles_per_hour'] %></td>
+    <% end %>
+
+  </tr>
+  <tr>
+    <td>miss distance, astronomical</td>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <td><%= element['miss_distance']['astronomical'] %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>miss distance, lunar</td>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <td><%= element['miss_distance']['lunar'] %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>miss distance, kilometers</td>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <td><%= element['miss_distance']['kilometers'] %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>miss distance, miles</td>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <td><%= element['miss_distance']['miles'] %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>orbiting body</td>
+    <% singleElement['close_approach_data'].each do |element| %>
+      <td><%= element['orbiting_body'] %></td>
+    <% end %>
+  </tr>
+
+
+</table>
+<% end %>
