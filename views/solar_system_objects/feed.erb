@@ -12,15 +12,15 @@
   </tr>
   <tr>
     <td>links-next</td>
-    <td><%= @feed.get_next %></td>
+    <td><a href="<%=@feed.get_next%>"><%= @feed.get_next %></a></td>
   </tr>
   <tr>
     <td>links-previous</td>
-    <td><%= @feed.get_previous %></td>
+    <td><a href="<%=@feed.get_previous%>"><%= @feed.get_previous %></a></td>
   </tr>
   <tr>
     <td>links-self</td>
-    <td><%= @feed.get_self %></td>
+    <td><a href="<%=@feed.get_self%>"><%= @feed.get_self %></a</td>
   </tr>
   <tr>
     <td>element count</td>
@@ -38,12 +38,16 @@
         <th>Values</th>
       </tr>
       <tr>
+        <td>links-self</td>
+        <td><a href="<%= singleElement['links']['self']%>"><%= singleElement['links']['self']%></a></td>
+      </tr>
+      <tr>
         <td>name</td>
         <td><%= singleElement['name']%></td>
       </tr>
       <tr>
         <td>nasa jpl url</td>
-        <td><%= singleElement['nasa_jpl_url']%></td>
+        <td><a href="<%=singleElement['nasa_jpl_url']%>"><%= singleElement['nasa_jpl_url']%></a></td>
       </tr>
       <tr>
         <td>absolute magnitude h</td>
