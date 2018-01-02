@@ -1,4 +1,4 @@
-class SolarSystemController < Sinatra::Base
+class NasaApiController < Sinatra::Base
 
   set :root, File.join(File.dirname(__FILE__), '..')
 
@@ -13,21 +13,25 @@ class SolarSystemController < Sinatra::Base
   endDate = 0
 
   get '/' do
-    erb :'solar_system_objects/index'
+    erb :'nasa_api/index'
+  end
+
+  get '/planets' do
+    erb :'my_resource/index'
   end
 
   get '/results/lookup' do
     @title = "Results"
     @lookup = GetLookup.new
     @results = @lookup.get_info_of_specific_neo(id)
-    erb :'solar_system_objects/lookup'
+    erb :'nasa_api/lookup'
   end
 
   get '/results/feed' do
     @title = "feed"
     @feed = GetSpecifiedRange.new
     @feed.get_specified_range(startDate,endDate)
-    erb :'solar_system_objects/feed'
+    erb :'nasa_api/feed'
 
   end
 
@@ -35,7 +39,7 @@ class SolarSystemController < Sinatra::Base
     @title = "Browse"
     @browse = GetListOfNeo.new
     @results = @browse.get_list_of_neo
-    erb :'solar_system_objects/browse'
+    erb :'nasa_api/browse'
 
   end
 
@@ -52,8 +56,7 @@ class SolarSystemController < Sinatra::Base
   end
 
   post '/browse' do
-    startDate = params[:start]
-    endDate = params[:end]
+
     redirect "/results/browse"
   end
 
