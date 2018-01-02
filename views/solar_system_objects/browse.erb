@@ -161,6 +161,8 @@
   </tr>
 </table>
 
+<% if singleElement['close_approach_data'].empty? == false %>
+
 <h4>Close approach data for <%= singleElement['neo_reference_id'] %> </h4>
 <table>
   <tr>
@@ -227,4 +229,5 @@
 
 
 </table>
+  <% end %>
 <% end %>
