@@ -136,6 +136,7 @@
 
 </table>
 
+<% if @lookup.get_close_approach_data_key_value.empty? == false %>
 <h2>Close approach data</h2>
 <table>
   <tr>
@@ -193,3 +194,4 @@
     <% end %>
   </tr>
 </table>
+<% end %>
