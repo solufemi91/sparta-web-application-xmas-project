@@ -1,6 +1,6 @@
 <h1>browse</h1>
 
-<table>
+<!-- <table>
   <tr>
     <th>Attribute</th>
     <th>Values</th>
@@ -12,4 +12,40 @@
     <td><%= @results[attribute] %></td>
   </tr>
   <% end %>
+</table> -->
+
+
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Values</th>
+  </tr>
+  <tr>
+    <td>links-next</td>
+    <td><%= @browse.get_next %></td>
+  </tr>
+  <tr>
+    <td>links-self</td>
+    <td><%= @browse.get_self %></td>
+  </tr>
+  <tr>
+    <td>Page size</td>
+    <td><%= @browse.get_page_size %></td>
+  </tr>
+  <tr>
+    <td>Page size</td>
+    <td><%= @browse.get_page_size %></td>
+  </tr>
+  <tr>
+    <td>Total elements</td>
+    <td><%= @browse.get_page_total_elements %></td>
+  </tr>
+  <tr>
+    <td>Total pages</td>
+    <td><%= @browse.get_page_total_pages %></td>
+  </tr>
+  <tr>
+    <td>Page Number</td>
+    <td><%= @browse.get_page_number %></td>
+  </tr>
 </table>
