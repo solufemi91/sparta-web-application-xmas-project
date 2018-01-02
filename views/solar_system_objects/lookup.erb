@@ -1,18 +1,6 @@
 <h1>Results for <%= @results['neo_reference_id'] %></h1>
 
-<!-- <table>
-  <tr>
-    <th>Attribute</th>
-    <th>Values</th>
-  </tr>
-  <% keys = @results.keys %>
-  <% keys.each do |attribute| %>
-  <tr>
-    <td><%= attribute %></td>
-    <td><%= @results[attribute] %></td>
-  </tr>
-  <% end %>
-</table> -->
+
 
 <table>
   <tr>
@@ -75,42 +63,6 @@
   <tr>
     <td>is_potentially_hazardous_asteroid_key_value</td>
     <td><%= @lookup.get_is_potentially_hazardous_asteroid_key_value%></td>
-  </tr>
-  <tr>
-    <td>all_close_approach_dates</td>
-    <td><%= @lookup.get_all_close_approach_dates%></td>
-  </tr>
-  <tr>
-    <td>all_epoch_date_close_approaches</td>
-    <td><%= @lookup.get_all_epoch_date_close_approaches%></td>
-  </tr>
-  <tr>
-    <td>all_relative_velocity_kps</td>
-    <td><%= @lookup.get_all_relative_velocity_kps%></td>
-  </tr>
-  <tr>
-    <td>all_relative_velocity_mphs</td>
-    <td><%= @lookup.get_all_relative_velocity_mphs%></td>
-  </tr>
-  <tr>
-    <td>all_miss_distance_astronomicals</td>
-    <td><%= @lookup.get_all_miss_distance_astronomicals%></td>
-  </tr>
-  <tr>
-    <td>all_miss_distance_lunars</td>
-    <td><%= @lookup.get_all_miss_distance_lunars%></td>
-  </tr>
-  <tr>
-    <td>all miss distance kilometers</td>
-    <td><%= @lookup.get_all_miss_distance_kilometers%></td>
-  </tr>
-  <tr>
-    <td>all miss distance miles</td>
-    <td><%= @lookup.get_all_miss_distance_miles%></td>
-  </tr>
-  <tr>
-    <td>all orbiting bodies</td>
-    <td><%= @lookup.get_all_orbiting_bodies%></td>
   </tr>
   <tr>
     <td>orbit id</td>
@@ -182,6 +134,62 @@
   </tr>
 
 
+</table>
 
-
+<h2>Close approach data</h2>
+<table>
+  <tr>
+    <th>Attribute</th>
+    <% @lookup.get_all_close_approach_dates.each do |element|%>
+    <th>Data for <%= element %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <td>all epoch date close approaches</td>
+    <% @lookup.get_all_epoch_date_close_approaches.each do |element|%>
+    <td><%= element %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>all relative velocitykps</td>
+    <% @lookup.get_all_relative_velocity_kps.each do |element|%>
+    <td><%= element %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>all relative velocity mphs</td>
+    <% @lookup.get_all_relative_velocity_mphs.each do |element|%>
+    <td><%= element %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>all miss distance astronomicals</td>
+    <% @lookup.get_all_miss_distance_astronomicals.each do |element|%>
+    <td><%= element %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>all miss distance lunars</td>
+    <% @lookup.get_all_miss_distance_lunars.each do |element|%>
+    <td><%= element %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>all miss distance kilometers</td>
+    <% @lookup.get_all_miss_distance_kilometers.each do |element|%>
+    <td><%= element %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>all miss distance miles</td>
+    <% @lookup.get_all_miss_distance_miles.each do |element|%>
+    <td><%= element %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td>all orbiting bodies</td>
+    <% @lookup.get_all_orbiting_bodies.each do |element|%>
+    <td><%= element %></td>
+    <% end %>
+  </tr>
 </table>
