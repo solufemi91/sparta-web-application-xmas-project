@@ -7,11 +7,11 @@
   </tr>
   <tr>
     <td>links-next</td>
-    <td><%= @browse.get_next %></td>
+    <td> <a href="<%= @browse.get_next %>"> <%= @browse.get_next %></a></td>
   </tr>
   <tr>
     <td>links-self</td>
-    <td><%= @browse.get_self %></td>
+    <td><a href="<%=@browse.get_self%>"><%= @browse.get_self %></a></td>
   </tr>
   <tr>
     <td>Page size</td>
@@ -44,12 +44,16 @@
     <th>Values</th>
   </tr>
   <tr>
+    <td>Link to data in JSON format</td>
+    <td><a href="<%= singleElement['links']['self']%>"><%= singleElement['links']['self']%></a></td>
+  </tr>
+  <tr>
     <td>name</td>
     <td><%= singleElement['name']%></td>
   </tr>
   <tr>
     <td>nasa jpl url</td>
-    <td><%= singleElement['nasa_jpl_url']%></td>
+    <td><a href="<%= singleElement['nasa_jpl_url']%>"> <%= singleElement['nasa_jpl_url']%></a></td>
   </tr>
   <tr>
     <td>absolute magnitude h</td>
