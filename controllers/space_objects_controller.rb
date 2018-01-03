@@ -7,7 +7,8 @@ class SpaceObjectsController < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get '/spaceObjects' do
+  get '/resource' do
+    @objects = SpaceObject.all
     erb :'space_objects/index'
   end
 
