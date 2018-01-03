@@ -1,7 +1,7 @@
 <h1>SpaceObjects</h1>
 
 <% @spaceobjects.each do |spaceobject| %>
-  <div class='hello'>
+  <div class='spaceObjectContainer'>
     <h1><a href="/<%= spaceobject.id%>"> <%= spaceobject.title %></a></h1>
     <img src="<%= spaceobject.image %>" alt="image is not here">
   </div>

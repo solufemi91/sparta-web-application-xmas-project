@@ -5,3 +5,7 @@ table, th, td {
 img {
   width: 103px;
 }
+
+.spaceObjectContainer {
+  display: inline-block;
+}
