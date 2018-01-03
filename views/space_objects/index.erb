@@ -2,9 +2,9 @@
 
 <% @spaceobjects.each do |spaceobject| %>
   <div class='hello'>
+    <h1><a href="/<%= spaceobject.id%>"> <%= spaceobject.title %></a></h1>
     <p><%= spaceobject.id %></p>
     <p><%= spaceobject.body %></p>
     <p><%= spaceobject.image %></p>
-    <p><%= spaceobject.title %></p>
   </div>
 <% end %>

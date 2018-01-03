@@ -14,11 +14,31 @@ class SpaceObjectsController < Sinatra::Base
 
   get "/resource/new" do
 
-  @title = "New space object form"
+    @title = "New space object form"
 
-  @spaceobjects = SpaceObject.new
+    @spaceobjects = SpaceObject.new
 
-  erb :'space_objects/new'
+    erb :'space_objects/new'
+
+  end
+
+  get '/:id' do
+
+    id = params[:id].to_i
+
+    @spaceobject = SpaceObject.find(id)
+
+    erb :'space_objects/show'
+
+  end
+
+  delete '/:id'  do
+
+    id = params[:id].to_i
+
+    SpaceObject.destroy(id)
+
+    redirect "/resource"
 
   end
 

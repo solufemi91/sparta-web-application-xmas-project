@@ -1,0 +1,8 @@
+<h1><%= @spaceobject.title  %></h1>
+<p><%= @spaceobject.body %></p>
+<img src="<%= @spaceobject.image %>" alt="image is not here">
+<a href="/<%= @spaceobject.id %>/edit">Edit</a>
+<form action="<%= @spaceobject.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" name="name" value="Delete">
+</form>

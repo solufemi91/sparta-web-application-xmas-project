@@ -57,4 +57,35 @@ class SpaceObject
   end
 
 
+  def self.find(id)
+
+
+    conn = self.open_connection
+
+
+    sql = "SELECT * FROM spaceObjects WHERE id =#{id} LIMIT 1"
+
+
+    spaceObjects = conn.exec(sql)
+
+
+    spaceObject = self.hydrate(spaceObjects[0])
+
+
+    spaceObject
+
+  end
+
+
+  def self.destroy(id)
+
+    conn = self.open_connection
+
+    sql = "DELETE FROM spaceObjects WHERE id = #{id}"
+
+    conn.exec(sql)
+
+  end
+
+
 end
