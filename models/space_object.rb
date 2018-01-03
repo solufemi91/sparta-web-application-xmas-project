@@ -9,7 +9,7 @@ class SpaceObject
   def self.all
 
 
-    conn = self.open_connection
+    conn = SpaceObject.open_connection
 
 
     sql = "SELECT id,title,body,image FROM spaceObjects ORDER BY id DESC"
@@ -36,6 +36,24 @@ class SpaceObject
     spaceObject.image = spaceObject_data['image']
 
     spaceObject
+  end
+
+
+  def save
+
+
+    conn = SpaceObject.open_connection
+
+
+    if(self.id)
+    sql = "UPDATE spaceObjects SET title='#{self.title}', body='#{self.body}', image='#{self.image}' WHERE id = #{self.id}"
+
+    else
+      sql = "INSERT INTO spaceObjects (title, body, image) VALUES ('#{self.title}', '#{self.body}',' #{self.image}')"
+    end
+
+
+    conn.exec(sql)
   end
 
 

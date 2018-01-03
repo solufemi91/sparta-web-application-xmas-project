@@ -1,8 +1,10 @@
 <h1>SpaceObjects</h1>
 
-<% @objects.each do |object| %>
-  <p><%= object.id %></p>
-  <p><%= object.body %></p>
-  <p><%= object.image %></p>
-  <p><%= object.title %></p>
+<% @spaceobjects.each do |spaceobject| %>
+  <div class='hello'>
+    <p><%= spaceobject.id %></p>
+    <p><%= spaceobject.body %></p>
+    <p><%= spaceobject.image %></p>
+    <p><%= spaceobject.title %></p>
+  </div>
 <% end %>

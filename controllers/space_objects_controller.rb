@@ -8,8 +8,37 @@ class SpaceObjectsController < Sinatra::Base
   end
 
   get '/resource' do
-    @objects = SpaceObject.all
+    @spaceobjects = SpaceObject.all
     erb :'space_objects/index'
   end
+
+  get "/resource/new" do
+
+  @title = "New space object form"
+
+  @spaceobjects = SpaceObject.new
+
+  erb :'space_objects/new'
+
+  end
+
+  post '/' do
+
+    spaceobject = SpaceObject.new
+
+    spaceobject.title = params[:title]
+
+    spaceobject.body = params[:body]
+
+    spaceobject.image = params[:image]
+
+    spaceobject.save
+
+    redirect '/resource'
+
+
+  end
+
+
 
 end
