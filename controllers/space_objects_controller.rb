@@ -72,6 +72,26 @@ class SpaceObjectsController < Sinatra::Base
 
   end
 
+  put '/:id'  do
+
+    id = params[:id].to_i
+
+    spaceobject = SpaceObject.find(id)
+
+    spaceobject.id = params[:id]
+
+    spaceobject.title = params[:title]
+
+    spaceobject.body = params[:body]
+
+    spaceobject.image = params[:image]
+
+    spaceobject.save
+
+    redirect '/resource'
+
+  end
+
 
 
 end
