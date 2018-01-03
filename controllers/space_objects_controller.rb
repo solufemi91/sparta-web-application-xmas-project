@@ -12,6 +12,16 @@ class SpaceObjectsController < Sinatra::Base
     erb :'space_objects/index'
   end
 
+  get '/:id' do
+
+    id = params[:id].to_i
+
+    @spaceobject = SpaceObject.find(id)
+
+    erb :'space_objects/show'
+
+  end
+
   get "/resource/new" do
 
     @title = "New space object form"
@@ -22,13 +32,16 @@ class SpaceObjectsController < Sinatra::Base
 
   end
 
-  get '/:id' do
 
-    id = params[:id].to_i
+  get '/:id/edit'  do
+     @title = "The edit space objects form"
 
-    @spaceobject = SpaceObject.find(id)
+     id = params[:id].to_i
 
-    erb :'space_objects/show'
+    @spaceobjects = SpaceObject.find(id)
+
+     erb :'space_objects/edit'
+
 
   end
 
