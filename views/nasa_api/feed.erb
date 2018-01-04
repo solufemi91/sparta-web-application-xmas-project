@@ -10,14 +10,14 @@
     <th>Attribute</th>
     <th>Values</th>
   </tr>
-  <tr>
+  <!-- <tr>
     <td>links-next</td>
     <td><a href="<%=@feed.get_next%>"><%= @feed.get_next %></a></td>
   </tr>
   <tr>
     <td>links-previous</td>
     <td><a href="<%=@feed.get_previous%>"><%= @feed.get_previous %></a></td>
-  </tr>
+  </tr> -->
   <tr>
     <td>links-self</td>
     <td><a href="<%=@feed.get_self%>"><%= @feed.get_self %></a</td>
@@ -31,7 +31,7 @@
  <% keys.each do |date|%>
  <h1><%= date %></h1>
  <% @neo[date].each do |singleElement|%>
-    <h3><%= singleElement['neo_reference_id'] %></h3>
+    <h3><%= singleElement['name'] %></h3>
     <table>
       <tr>
         <th>Attribute</th>
@@ -42,8 +42,8 @@
         <td><a href="<%= singleElement['links']['self']%>"><%= singleElement['links']['self']%></a></td>
       </tr>
       <tr>
-        <td>name</td>
-        <td><%= singleElement['name']%></td>
+        <td>Asteroid ID</td>
+        <td><%= singleElement['neo_reference_id']%></td>
       </tr>
       <tr>
         <td>nasa jpl url</td>
