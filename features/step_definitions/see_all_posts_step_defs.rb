@@ -15,14 +15,17 @@ When("I click a link") do
 end
 
 Then("All the posts for the resource should be displayed on one page.") do
-  # database_titles_array = []
-  # SpaceObject.all.each do |spaceobject|
-  #   database_titles_array.push(spaceobject.title)
-  # end
+
+  database_titles_array = []
+  SpaceObject.all.each do |spaceobject|
+    database_titles_array.push(spaceobject.title)
+  end
 
   website_titles_array = []
   resource_index.find_space_object_titles.each do |spaceobject|
     website_titles_array.push(spaceobject.text)
   end
-  puts website_titles_array
+
+  expect(website_titles_array.sort).to eq database_titles_array.sort
+
 end
