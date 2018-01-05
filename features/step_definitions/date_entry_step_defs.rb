@@ -1,4 +1,4 @@
-Given ("I am on the my home page") do
+Given ("I am on the home page") do
   my_homepage.visit_home_page
 end
 
