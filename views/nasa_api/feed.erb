@@ -2,7 +2,7 @@
 
 <% keys = @neo.keys %>
 
-<h1>feed from <%= keys.first %> to <%= keys.last %> </h1>
+<h1>feed from <%= keys[1] %> to <%= keys.last %> </h1>
 
 
 <table>
@@ -21,7 +21,7 @@
 </table>
 
  <% keys.each do |date|%>
- <h1><%= date %></h1>
+ <h1 class="date_title_asteroid_feed"><%= date %></h1>
  <% @neo[date].each do |singleElement|%>
     <h3><%= singleElement['name'] %></h3>
     <table>

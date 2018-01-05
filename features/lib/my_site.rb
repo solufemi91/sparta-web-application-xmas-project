@@ -3,6 +3,7 @@ require_relative '../lib/pages/resource_index_page'
 require_relative '../lib/pages/resource_new_page'
 require_relative '../lib/pages/resource_show_page'
 require_relative '../lib/pages/resource_edit_page'
+require_relative '../lib/pages/feed_results_page'
 
 
 module MySite
@@ -25,6 +26,10 @@ module MySite
 
   def resource_edit
     ResourceEditPage.new
+  end
+
+  def feed_results
+    FeedResultsPage.new
   end
 
 

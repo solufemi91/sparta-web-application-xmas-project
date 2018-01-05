@@ -6,4 +6,4 @@ Feature: User Register
   Scenario: If I input dates, I should get back results
     Given I am on the home page
     When I search for dates
-    Then I receive results for the correct dates in a table format
+    Then I receive results for the correct dates
