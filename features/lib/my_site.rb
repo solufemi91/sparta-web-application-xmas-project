@@ -1,5 +1,8 @@
 require_relative '../lib/pages/home_page'
 require_relative '../lib/pages/resource_index_page'
+require_relative '../lib/pages/resource_new_page'
+require_relative '../lib/pages/resource_show_page'
+require_relative '../lib/pages/resource_edit_page'
 
 
 module MySite
@@ -10,6 +13,18 @@ module MySite
 
   def resource_index
     ResourceIndexPage.new
+  end
+
+  def resource_new
+    ResourceNewPage.new
+  end
+
+  def resource_show
+    ResourceShowPage.new
+  end
+
+  def resource_edit
+    ResourceEditPage.new
   end
 
 

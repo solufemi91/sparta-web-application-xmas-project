@@ -1,18 +1,18 @@
 <form action="/<%= @spaceobjects.id %>" method="POST">
   <div>
     <label>Title</label>
-    <input type="text" name="title" placeholder="Enter a title" value="<%= @spaceobjects.title %>">
+    <input id="title_field" type="text" name="title" placeholder="Enter a title" value="<%= @spaceobjects.title %>">
   </div>
   <div>
     <label>Body</label>
-    <textarea name="body" rows="8" cols="40" placeholder="The body of the post"><%= @spaceobjects.body %></textarea>
+    <textarea id="body_field" name="body" rows="8" cols="40" placeholder="The body of the post"><%= @spaceobjects.body %></textarea>
   </div>
   <div>
     <label>Image Link</label>
-    <input type="text" name="image" placeholder="Enter the link of the image of the book" value="<%= @spaceobjects.image %>">
+    <input id="image_field"type="text" name="image" placeholder="Enter the link of the image of the book" value="<%= @spaceobjects.image %>">
   </div>
   <div>
-    <input type="submit" value="Save Post">
+    <input id="new_post_save_button" type="submit" value="Save Post">
   </div>
   <% if(@spaceobjects.id) %>
     <input type="hidden" name="_method" value="PUT">
