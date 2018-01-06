@@ -1,8 +1,9 @@
 <% @neo = @feed.get_near_earth_objects %>
 
 <% keys = @neo.keys %>
+<% keys2 = keys.sort %>
 
-<h1>feed from <%= keys[1] %> to <%= keys.last %> </h1>
+<h1>feed from <%= keys2.first %> to <%= keys2.last %> </h1>
 
 
 <table>
@@ -20,7 +21,7 @@
   </tr>
 </table>
 
- <% keys.each do |date|%>
+ <% keys2.each do |date|%>
  <h1 class="date_title_asteroid_feed"><%= date %></h1>
  <% @neo[date].each do |singleElement|%>
     <h3><%= singleElement['name'] %></h3>
