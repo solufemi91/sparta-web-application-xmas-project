@@ -3,124 +3,112 @@
 <% keys = @neo.keys %>
 <% keys2 = keys.sort %>
 
-<h1>feed from <%= keys2.first %> to <%= keys2.last %> </h1>
+<h1>Date range: <%= keys2.first %> to <%= keys2.last %> </h1>
 
 
-<table>
-  <tr>
-    <th>Attribute</th>
-    <th>Values</th>
-  </tr>
-  <tr>
-    <td>links-self</td>
-    <td><a href="<%=@feed.get_self%>"><%= @feed.get_self %></a</td>
-  </tr>
-  <tr>
-    <td>element count</td>
-    <td><%= @feed.get_element_count %></td>
-  </tr>
-</table>
+<h1>Number of Asteroids displayed: <%= @feed.get_element_count %></h1>
+
 
  <% keys2.each do |date|%>
- <h1 class="date_title_asteroid_feed"><%= date %></h1>
+ <h1 class="date_title_asteroid_feed">Asteroids with a close approach date of: <%= date %></h1>
  <% @neo[date].each do |singleElement|%>
-    <h3><%= singleElement['name'] %></h3>
-    <table>
+    <h3>Asteroid name: <%= singleElement['name'] %></h3>
+    <table class="asteroid_tables">
       <tr>
         <th>Attribute</th>
-        <th>Values</th>
+        <th>Value</th>
       </tr>
       <tr>
-        <td>links-self</td>
-        <td><a href="<%= singleElement['links']['self']%>"><%= singleElement['links']['self']%></a></td>
+        <td>Link to data in JSON format</td>
+        <td class="results_value"><a href="<%= singleElement['links']['self']%>"><%= singleElement['links']['self']%></a></td>
       </tr>
       <tr>
         <td>Asteroid ID</td>
-        <td><%= singleElement['neo_reference_id']%></td>
+        <td class="results_value"><%= singleElement['neo_reference_id']%></td>
       </tr>
       <tr>
-        <td>nasa jpl url</td>
-        <td><a href="<%=singleElement['nasa_jpl_url']%>"><%= singleElement['nasa_jpl_url']%></a></td>
+        <td>Nasa JPL URL</td>
+        <td class="results_value"><a href="<%=singleElement['nasa_jpl_url']%>"><%= singleElement['nasa_jpl_url']%></a></td>
       </tr>
       <tr>
-        <td>absolute magnitude h</td>
-        <td><%= singleElement['absolute_magnitude_h']%></td>
+        <td>Absolute Magnitude H</td>
+        <td class="results_value"><%= singleElement['absolute_magnitude_h']%></td>
       </tr>
       <tr>
-        <td>estimated minimum diameter in kilometers</td>
-        <td><%= singleElement['estimated_diameter']['kilometers']['estimated_diameter_min']%></td>
+        <td>Estimated minimum diameter in kilometers</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['kilometers']['estimated_diameter_min']%></td>
       </tr>
       <tr>
-        <td>estimated maximum diameter in kilometers</td>
-        <td><%= singleElement['estimated_diameter']['kilometers']['estimated_diameter_max']%></td>
+        <td>Estimated maximum diameter in kilometers</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['kilometers']['estimated_diameter_max']%></td>
       </tr>
       <tr>
-        <td>estimated minimum diameter in meters</td>
-        <td><%= singleElement['estimated_diameter']['meters']['estimated_diameter_min']%></td>
+        <td>Estimated minimum diameter in meters</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['meters']['estimated_diameter_min']%></td>
       </tr>
       <tr>
-        <td>estimated maximum diameter in meters</td>
-        <td><%= singleElement['estimated_diameter']['meters']['estimated_diameter_max']%></td>
+        <td>Estimated maximum diameter in meters</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['meters']['estimated_diameter_max']%></td>
       </tr>
       <tr>
-        <td>estimated minimum diameter in miles</td>
-        <td><%= singleElement['estimated_diameter']['miles']['estimated_diameter_min']%></td>
+        <td>Estimated minimum diameter in miles</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['miles']['estimated_diameter_min']%></td>
       </tr>
       <tr>
-        <td>estimated maximum diameter in miles</td>
-        <td><%= singleElement['estimated_diameter']['miles']['estimated_diameter_max']%></td>
+        <td>Estimated maximum diameter in miles</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['miles']['estimated_diameter_max']%></td>
       </tr>
       <tr>
-        <td>estimated minimum diameter in feet</td>
-        <td><%= singleElement['estimated_diameter']['feet']['estimated_diameter_min']%></td>
+        <td>Estimated minimum diameter in feet</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['feet']['estimated_diameter_min']%></td>
       </tr>
       <tr>
-        <td>estimated maximum diameter in feet</td>
-        <td><%= singleElement['estimated_diameter']['feet']['estimated_diameter_max']%></td>
+        <td>Estimated maximum diameter in feet</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['feet']['estimated_diameter_max']%></td>
       </tr>
       <tr>
-        <td>is potentially hazardous asteroid?</td>
-        <td><%= singleElement['is_potentially_hazardous_asteroid']%></td>
+        <td>Is potentially hazardous asteroid?</td>
+        <td class="results_value"><%= singleElement['is_potentially_hazardous_asteroid']%></td>
       </tr>
       <tr>
-        <td>close approach date</td>
-        <td><%= singleElement['close_approach_data'][0]['close_approach_date']%></td>
+        <td>Close approach date</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['close_approach_date']%></td>
       </tr>
       <tr>
-        <td>epoch_date_close_approach</td>
-        <td><%= singleElement['close_approach_data'][0]['epoch_date_close_approach']%></td>
+        <td>Epoch date close approach</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['epoch_date_close_approach']%></td>
       </tr>
       <tr>
-        <td>relative velocity, kilometers per second</td>
-        <td><%= singleElement['close_approach_data'][0]['relative_velocity']['kilometers_per_second']%></td>
+        <td>Relative velocity, kilometers per second</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['relative_velocity']['kilometers_per_second']%></td>
       </tr>
       <tr>
-        <td>relative velocity, kilometers per hour</td>
-        <td><%= singleElement['close_approach_data'][0]['relative_velocity']['kilometers_per_hour']%></td>
+        <td>Relative velocity, kilometers per hour</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['relative_velocity']['kilometers_per_hour']%></td>
       </tr>
       <tr>
-        <td>relative velocity, miles per hour</td>
-        <td><%= singleElement['close_approach_data'][0]['relative_velocity']['miles_per_hour']%></td>
+        <td>Relative velocity, miles per hour</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['relative_velocity']['miles_per_hour']%></td>
       </tr>
       <tr>
-        <td>miss distance, astronomical</td>
-        <td><%= singleElement['close_approach_data'][0]['miss_distance']['astronomical']%></td>
+        <td>Miss distance, astronomical</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['miss_distance']['astronomical']%></td>
       </tr>
       <tr>
-        <td>miss distance, lunar</td>
-        <td><%= singleElement['close_approach_data'][0]['miss_distance']['lunar']%></td>
+        <td>Miss distance, lunar</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['miss_distance']['lunar']%></td>
       </tr>
       <tr>
-        <td>miss distance, kilometers</td>
-        <td><%= singleElement['close_approach_data'][0]['miss_distance']['kilometers']%></td>
+        <td>Miss distance, kilometers</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['miss_distance']['kilometers']%></td>
       </tr>
       <tr>
-        <td>miss distance, miles</td>
-        <td><%= singleElement['close_approach_data'][0]['miss_distance']['miles']%></td>
+        <td>Miss distance, miles</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['miss_distance']['miles']%></td>
       </tr>
       <tr>
-        <td>orbiting_body</td>
-        <td><%= singleElement['close_approach_data'][0]['orbiting_body']%></td>
+        <td>Orbiting body</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['orbiting_body']%></td>
       </tr>
     </table>
   <% end %>
