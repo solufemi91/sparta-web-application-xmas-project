@@ -2,7 +2,11 @@
     border: 1px solid black;
 }*/
 
-table {
+.asteroid_name_title {
+  text-align: center;
+}
+
+table, tr {
   border: 1px solid black;
   margin: auto;
 }
@@ -87,4 +91,21 @@ img {
   margin-left: 205px;
   margin-bottom: 8px;
   margin-top: 8px;
+}
+
+.date_title_asteroid_feed {
+  text-align: center;
+}
+
+#date_range_title {
+  text-align: center;
+}
+
+#number_of_asteroids_title {
+  text-align: center;
+}
+
+.asteroid_tables_div{
+  margin-bottom: 34px;
+  margin-top: 78px;
 }

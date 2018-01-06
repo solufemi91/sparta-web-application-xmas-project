@@ -3,16 +3,17 @@
 <% keys = @neo.keys %>
 <% keys2 = keys.sort %>
 
-<h1>Date range: <%= keys2.first %> to <%= keys2.last %> </h1>
+<h2 id="date_range_title">Date range: <%= keys2.first %> to <%= keys2.last %> </h2>
 
 
-<h1>Number of Asteroids displayed: <%= @feed.get_element_count %></h1>
+<h2 id="number_of_asteroids_title">Number of Asteroids displayed: <%= @feed.get_element_count %></h2>
 
 
  <% keys2.each do |date|%>
- <h1 class="date_title_asteroid_feed">Asteroids with a close approach date of: <%= date %></h1>
+ <h3 class="date_title_asteroid_feed">Asteroids with a close approach date of: <%= date %></h3>
  <% @neo[date].each do |singleElement|%>
-    <h3>Asteroid name: <%= singleElement['name'] %></h3>
+  <div class="asteroid_tables_div">
+    <h4 class="asteroid_name_title">Asteroid name: <%= singleElement['name'] %></h4>
     <table class="asteroid_tables">
       <tr>
         <th>Attribute</th>
@@ -27,7 +28,7 @@
         <td class="results_value"><%= singleElement['neo_reference_id']%></td>
       </tr>
       <tr>
-        <td>Nasa JPL URL</td>
+        <td>Link to Nasa JPL URL</td>
         <td class="results_value"><a href="<%=singleElement['nasa_jpl_url']%>"><%= singleElement['nasa_jpl_url']%></a></td>
       </tr>
       <tr>
@@ -111,5 +112,6 @@
         <td class="results_value"><%= singleElement['close_approach_data'][0]['orbiting_body']%></td>
       </tr>
     </table>
+  </div>
   <% end %>
  <% end %>
