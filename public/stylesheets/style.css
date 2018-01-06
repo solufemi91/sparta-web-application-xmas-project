@@ -1,4 +1,8 @@
-table, th, td {
+/*table, th, td {
+    border: 1px solid black;
+}*/
+
+table {
     border: 1px solid black;
 }
 
@@ -8,4 +12,19 @@ img {
 
 .spaceObjectContainer {
   display: inline-block;
+}
+
+#navbar{
+  background-color: #000000b3;
+  height: 40px;
+}
+
+.navbar_links {
+  margin: 140px;
+}
+
+.index_form_containers {
+  background-color: red;
+  width: 483px;
+  margin: auto;
 }
