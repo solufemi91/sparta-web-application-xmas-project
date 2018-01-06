@@ -1,8 +1,8 @@
-<h1>SpaceObjects</h1>
+<h1>Welcome to the SpaceObjects Page!</h1>
 
 <% @spaceobjects.each do |spaceobject| %>
   <div class='spaceObjectContainer'>
     <h1 class='space_object_titles'><a href="/<%= spaceobject.id%>"> <%= spaceobject.title %></a></h1>
-    <img class='space_object_images' src="<%= spaceobject.image %>" alt="image is not here">
+    <img id="picture_<%= spaceobject.id%>" class='space_object_images' src="<%= spaceobject.image %>" alt="image is not here">
   </div>
 <% end %>

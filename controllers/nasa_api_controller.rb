@@ -16,11 +16,7 @@ class NasaApiController < Sinatra::Base
     erb :'nasa_api/index'
   end
 
-  get '/planets' do
-    erb :'my_resource/index'
-  end
-
-  get '/results/lookup' do
+  get "/results/lookup" do
     @title = "Results"
     @lookup = GetLookup.new
     @results = @lookup.get_info_of_specific_neo(id)
@@ -40,7 +36,6 @@ class NasaApiController < Sinatra::Base
     @browse = GetListOfNeo.new
     @results = @browse.get_list_of_neo
     erb :'nasa_api/browse'
-
   end
 
 

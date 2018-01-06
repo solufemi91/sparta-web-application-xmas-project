@@ -1,3 +1,6 @@
+require 'sinatra/base'
+require 'sinatra/reloader'
+
 class SpaceObjectsController < Sinatra::Base
   set :root, File.join(File.dirname(__FILE__), '..')
 

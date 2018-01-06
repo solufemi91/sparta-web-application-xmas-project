@@ -1,7 +1,6 @@
 
 Given("I have clicked a particular post") do
   resource_index.visit_resource_index_page
-
   resource_edit.visit_earth
 end
 

@@ -226,8 +226,8 @@ class GetSpecifiedRange
 
 end
 
-x = GetSpecifiedRange.new
-x.get_specified_range('2015-09-08','2015-09-07')
-puts x.get_all_neo_reference_id_key_value
-# puts x.selectDates
-# puts x.get_all_orbiting_bodies
+# x = GetSpecifiedRange.new
+# x.get_specified_range('2015-09-08','2015-09-07')
+# puts x.get_all_neo_reference_id_key_value
+# # puts x.selectDates
+# # puts x.get_all_orbiting_bodies

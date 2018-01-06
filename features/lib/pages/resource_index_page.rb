@@ -6,6 +6,7 @@ class ResourceIndexPage
   RESOURCE_LINK = "resource_link"  unless const_defined?(:RESOURCE_LINK)
   SPACE_OBJECT_TITLES = 'space_object_titles' unless const_defined?(:SPACE_OBJECT_TITLES)
   NEW_POST_LINK = 'new_post_link' unless const_defined?(:NEW_POST_LINK)
+  PICTURE_9 = 'picture_9' unless const_defined?(:PICTURE_9)
 
   def visit_home_page
     visit('/')
@@ -49,6 +50,14 @@ class ResourceIndexPage
 
   def click_link_to_new_post
     find_link_to_new_post.click
+  end
+
+  def select_picture9
+    find(:id, PICTURE_9)
+  end
+
+  def picture9_visible?
+    select_picture9.visible?
   end
 
 
