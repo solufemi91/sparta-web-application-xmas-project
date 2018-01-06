@@ -6,6 +6,10 @@ table {
     border: 1px solid black;
 }
 
+body {
+  color: #337ab7;
+}
+
 img {
   width: 103px;
 }
@@ -24,7 +28,54 @@ img {
 }
 
 .index_form_containers {
-  background-color: red;
+  background-color: #000000b3;
   width: 483px;
   margin: auto;
+  margin-top: 44px;
+}
+
+#start_date_field {
+  margin: auto;
+}
+
+#feed_search_button {
+  margin-left: 205px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.titles_index_page {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#start_date_label {
+  padding-left: 12px;
+}
+
+/*#asteroid_id_field {
+  margin-left: 83px;
+}*/
+
+#asteroid_id_label {
+ margin-left: 109px;
+}
+
+
+#form_search_button {
+  margin-left: 205px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+#browse_title_index_page {
+  margin-left: 70px;
+
+}
+
+
+#browse_search_button {
+  margin-left: 205px;
+  margin-bottom: 8px;
+  margin-top: 8px;
 }
