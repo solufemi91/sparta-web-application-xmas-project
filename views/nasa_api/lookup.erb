@@ -1,4 +1,4 @@
-<h1>Results for <%= @results['neo_reference_id'] %></h1>
+<h1 id="asteroid_name_title_lookup">Name of asteroid: <%= @results['name'] %></h1>
 
 
 
@@ -9,189 +9,189 @@
   </tr>
 
   <tr>
-    <td>links-self</td>
-    <td><a href="<%= @lookup.get_links_self_key_value %>"><%= @lookup.get_links_self_key_value %></a></td>
+    <td>Link to data in JSON format</td>
+    <td class="results_value"><a href="<%= @lookup.get_links_self_key_value %>"><%= @lookup.get_links_self_key_value %></a></td>
   </tr>
   <tr>
-    <td>neo_reference_id</td>
-    <td><%= @lookup.get_neo_reference_id_key_value %></td>
+    <td>Neo reference id</td>
+    <td class="results_value"><%= @lookup.get_neo_reference_id_key_value %></td>
   </tr>
   <tr>
-    <td>name</td>
-    <td><%= @lookup.get_name_key_value %></td>
+    <td>Name</td>
+    <td class="results_value"><%= @lookup.get_name_key_value %></td>
   </tr>
   <tr>
-    <td>nasa_jpl_url</td>
-    <td><a href="<%= @lookup.get_nasa_jpl_url_key_value %>"> <%= @lookup.get_nasa_jpl_url_key_value%></a></td>
+    <td>Link to Nasa JPL URL</td>
+    <td class="results_value"><a href="<%= @lookup.get_nasa_jpl_url_key_value %>"> <%= @lookup.get_nasa_jpl_url_key_value%></a></td>
   </tr>
   <tr>
-    <td>absolute_magnitude_h</td>
-    <td><%= @lookup.get_absolute_magnitude_h_key_value%></td>
+    <td>Absolute magnitude H</td>
+    <td class="results_value"><%= @lookup.get_absolute_magnitude_h_key_value%></td>
   </tr>
   <tr>
-    <td>estimated_diameter_kilometers_min_key_value</td>
-    <td><%= @lookup.get_estimated_diameter_kilometers_min_key_value%></td>
+    <td>Estimated minimum diameter in kilometers</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_kilometers_min_key_value%></td>
   </tr>
   <tr>
-    <td>estimated_diameter_kilometers_max_key_value</td>
-    <td><%= @lookup.get_estimated_diameter_kilometers_max_key_value%></td>
+    <td class="results_value">Estimated maximum diameter in kilometers</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_kilometers_max_key_value%></td>
   </tr>
   <tr>
-    <td>estimated_diameter_meters_min_key_value</td>
-    <td><%= @lookup.get_estimated_diameter_meters_min_key_value%></td>
+    <td>Estimated minimum diameter in meters</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_meters_min_key_value%></td>
   </tr>
   <tr>
-    <td>estimated_diameter_meters_max_key_value</td>
-    <td><%= @lookup.get_estimated_diameter_meters_max_key_value%></td>
+    <td>Estimated maximum diameter in meters</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_meters_max_key_value%></td>
   </tr>
   <tr>
-    <td>estimated_diameter_miles_min_key_value</td>
-    <td><%= @lookup.get_estimated_diameter_miles_min_key_value%></td>
+    <td>Estimated minimum diameter in miles</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_miles_min_key_value%></td>
   </tr>
   <tr>
-    <td>estimated_diameter_miles_max_key_value</td>
-    <td><%= @lookup.get_estimated_diameter_miles_max_key_value%></td>
+    <td>Estimated maximum diameter in miles</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_miles_max_key_value%></td>
   </tr>
   <tr>
-    <td>estimated_diameter_feet_min_key_value</td>
-    <td><%= @lookup.get_estimated_diameter_feet_min_key_value%></td>
+    <td>Estimated minimum diameter in feet</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_feet_min_key_value%></td>
   </tr>
   <tr>
-    <td>estimated_diameter_feet_max_key_value</td>
-    <td><%= @lookup.get_estimated_diameter_feet_max_key_value%></td>
+    <td>Estimated maximum diameter in feet</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_feet_max_key_value%></td>
   </tr>
   <tr>
-    <td>is_potentially_hazardous_asteroid_key_value</td>
-    <td><%= @lookup.get_is_potentially_hazardous_asteroid_key_value%></td>
+    <td>Potentially hazardous asteroid?</td>
+    <td class="results_value"><%= @lookup.get_is_potentially_hazardous_asteroid_key_value%></td>
   </tr>
   <tr>
-    <td>orbit id</td>
-    <td><%= @lookup.get_orbit_id%></td>
+    <td>Orbit id</td>
+    <td class="results_value"><%= @lookup.get_orbit_id%></td>
   </tr>
   <tr>
-    <td>orbit determination date</td>
-    <td><%= @lookup.get_orbit_determination_date%></td>
+    <td>Orbit determination date</td>
+    <td class="results_value"><%= @lookup.get_orbit_determination_date%></td>
   </tr>
   <tr>
-    <td>orbit uncertainty</td>
-    <td><%= @lookup.get_orbit_uncertainty%></td>
+    <td>Orbit uncertainty</td>
+    <td class="results_value"><%= @lookup.get_orbit_uncertainty%></td>
   </tr>
   <tr>
-    <td>minimum orbit intersection</td>
-    <td><%= @lookup.get_minimum_orbit_intersection%></td>
+    <td>Minimum orbit intersection</td>
+    <td class="results_value"><%= @lookup.get_minimum_orbit_intersection%></td>
   </tr>
   <tr>
-    <td>jupiter tisserand invariant</td>
-    <td><%= @lookup.get_jupiter_tisserand_invariant%></td>
+    <td>Jupiter tisserand invariant</td>
+    <td class="results_value"><%= @lookup.get_jupiter_tisserand_invariant%></td>
   </tr>
   <tr>
-    <td>epoch osculation</td>
-    <td><%= @lookup.get_epoch_osculation%></td>
+    <td>Epoch osculation</td>
+    <td class="results_value"><%= @lookup.get_epoch_osculation%></td>
   </tr>
   <tr>
-    <td>eccentricity</td>
-    <td><%= @lookup.get_eccentricity%></td>
+    <td>Eccentricity</td>
+    <td class="results_value"><%= @lookup.get_eccentricity%></td>
   </tr>
   <tr>
-    <td>semi major axis</td>
-    <td><%= @lookup.get_semi_major_axis%></td>
+    <td>Semi major axis</td>
+    <td class="results_value"><%= @lookup.get_semi_major_axis%></td>
   </tr>
   <tr>
-    <td>inclination</td>
-    <td><%= @lookup.get_inclination%></td>
+    <td>Inclination</td>
+    <td class="results_value"><%= @lookup.get_inclination%></td>
   </tr>
   <tr>
-    <td>orbital period</td>
-    <td><%= @lookup.get_orbital_period%></td>
+    <td>Orbital period</td>
+    <td class="results_value"><%= @lookup.get_orbital_period%></td>
   </tr>
   <tr>
-    <td>perihelion_distance</td>
-    <td><%= @lookup.get_perihelion_distance%></td>
+    <td>Perihelion distance</td>
+    <td class="results_value"><%= @lookup.get_perihelion_distance%></td>
   </tr>
   <tr>
-    <td>perihelion_argument</td>
-    <td><%= @lookup.get_perihelion_argument%></td>
+    <td>Perihelion argument</td>
+    <td class="results_value"><%= @lookup.get_perihelion_argument%></td>
   </tr>
   <tr>
-    <td>aphelion_distance</td>
-    <td><%= @lookup.get_aphelion_distance%></td>
+    <td>Aphelion distance</td>
+    <td class="results_value"><%= @lookup.get_aphelion_distance%></td>
   </tr>
   <tr>
-    <td>perihelion_time</td>
-    <td><%= @lookup.get_perihelion_time%></td>
+    <td>Perihelion time</td>
+    <td class="results_value"><%= @lookup.get_perihelion_time%></td>
   </tr>
   <tr>
-    <td>mean_anomaly</td>
-    <td><%= @lookup.get_mean_anomaly%></td>
+    <td>Mean anomaly</td>
+    <td class="results_value"><%= @lookup.get_mean_anomaly%></td>
   </tr>
   <tr>
-    <td>mean_motion</td>
-    <td><%= @lookup.get_mean_motion%></td>
+    <td>Mean motion</td>
+    <td class="results_value"><%= @lookup.get_mean_motion%></td>
   </tr>
   <tr>
-    <td>equinox</td>
-    <td><%= @lookup.get_equinox%></td>
+    <td>Equinox</td>
+    <td class="results_value"><%= @lookup.get_equinox%></td>
   </tr>
 
 
 </table>
 
-<% if @lookup.get_close_approach_data_key_value.empty? == false %>
-<h2>Close approach data</h2>
-<table>
-  <tr>
-    <th>Attribute</th>
-    <% @lookup.get_all_close_approach_dates.each do |element|%>
-    <th>Data for <%= element %></th>
-    <% end %>
-  </tr>
-  <tr>
-    <td>all epoch date close approaches</td>
-    <% @lookup.get_all_epoch_date_close_approaches.each do |element|%>
-    <td><%= element %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>all relative velocitykps</td>
-    <% @lookup.get_all_relative_velocity_kps.each do |element|%>
-    <td><%= element %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>all relative velocity mphs</td>
-    <% @lookup.get_all_relative_velocity_mphs.each do |element|%>
-    <td><%= element %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>all miss distance astronomicals</td>
-    <% @lookup.get_all_miss_distance_astronomicals.each do |element|%>
-    <td><%= element %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>all miss distance lunars</td>
-    <% @lookup.get_all_miss_distance_lunars.each do |element|%>
-    <td><%= element %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>all miss distance kilometers</td>
-    <% @lookup.get_all_miss_distance_kilometers.each do |element|%>
-    <td><%= element %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>all miss distance miles</td>
-    <% @lookup.get_all_miss_distance_miles.each do |element|%>
-    <td><%= element %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>all orbiting bodies</td>
-    <% @lookup.get_all_orbiting_bodies.each do |element|%>
-    <td><%= element %></td>
-    <% end %>
-  </tr>
-</table>
-<% end %>
+<!-- # <% if @lookup.get_close_approach_data_key_value.empty? == false %>
+# <h2>Close approach data</h2>
+# <table>
+#   <tr>
+#     <th>Attribute</th>
+#     <% @lookup.get_all_close_approach_dates.each do |element|%>
+#     <th>Data for <%= element %></th>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all epoch date close approaches</td>
+#     <% @lookup.get_all_epoch_date_close_approaches.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all relative velocitykps</td>
+#     <% @lookup.get_all_relative_velocity_kps.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all relative velocity mphs</td>
+#     <% @lookup.get_all_relative_velocity_mphs.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all miss distance astronomicals</td>
+#     <% @lookup.get_all_miss_distance_astronomicals.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all miss distance lunars</td>
+#     <% @lookup.get_all_miss_distance_lunars.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all miss distance kilometers</td>
+#     <% @lookup.get_all_miss_distance_kilometers.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all miss distance miles</td>
+#     <% @lookup.get_all_miss_distance_miles.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all orbiting bodies</td>
+#     <% @lookup.get_all_orbiting_bodies.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+# </table>
+# <% end %> -->

@@ -1,8 +1,10 @@
-<h1>Welcome to the SpaceObjects Page!</h1>
+<h1 id="resource_index_title">Welcome to the SpaceObjects Page!</h1>
+<div class="row_wrapper">
 
-<% @spaceobjects.each do |spaceobject| %>
+  <% @spaceobjects.each do |spaceobject| %>
   <div class='spaceObjectContainer'>
-    <h1 class='space_object_titles'><a href="/<%= spaceobject.id%>"> <%= spaceobject.title %></a></h1>
+    <h4 class='space_object_titles'><a href="/<%= spaceobject.id%>"> <%= spaceobject.title %></a></h4>
     <img id="picture_<%= spaceobject.id%>" class='space_object_images' src="<%= spaceobject.image %>" alt="image is not here">
   </div>
 <% end %>
+</div>

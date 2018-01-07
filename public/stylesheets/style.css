@@ -30,6 +30,9 @@ img {
 .spaceObjectContainer {
   display: inline-block;
 }
+.space_object_titles {
+  text-align: center;
+}
 
 #navbar{
   background-color: #000000b3;
@@ -108,4 +111,26 @@ img {
 .asteroid_tables_div{
   margin-bottom: 34px;
   margin-top: 78px;
+}
+
+#asteroid_name_title_lookup {
+  text-align: center;
+}
+
+#main_title_browse {
+  text-align: center;
+}
+
+#resource_index_title {
+  text-align: center;
+}
+
+.row_wrapper {
+  width: 500px;
+  margin: auto;
+}
+
+.space_object_images {
+  width: 103px;
+  height: 103px;
 }
