@@ -3,16 +3,16 @@
   <form id="feed_form"action="/feed" method="POST">
     <div>
       <label id="start_date_label" >Start Date</label>
-      <input id='start_date_field' type="text" name="start" placeholder="Enter a start date" value=" ">
+      <input id='start_date_field' type="text" name="start" placeholder="YYYY-MM-DD" value=" ">
       <label>End Date</label>
-      <input id='end_date_field' type="text" name="end" placeholder="Enter a end date" value=" ">
+      <input id='end_date_field' type="text" name="end" placeholder="YYYY-MM-DD" value=" ">
     </div>
     <input id="feed_search_button" type="submit" value="Search">
   </form>
 </div>
 
 <div class="index_form_containers">
-  <h1 class="titles_index_page">Search for an Asteroid by id</h1>
+  <h1 class="titles_index_page">Search for an asteroid by id</h1>
   <form id="lookup_form" action="/lookup" method="POST">
     <div>
       <label id ="asteroid_id_label" >Astroid Id</label>
@@ -25,7 +25,7 @@
 
 
 <div class="index_form_containers">
-  <h1 id="browse_title_index_page" class="titles_index_page">Get browse service</h1>
+  <h1 id="browse_title_index_page" class="titles_index_page">Press search to get all asteroids</h1>
   <form id="browse_form" action="/browse" method="POST">
     <div>
       <input id="browse_search_button" type="submit" value="Search">
