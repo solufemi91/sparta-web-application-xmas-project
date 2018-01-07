@@ -1,4 +1,4 @@
-Feature: User Register
+Feature: Search for information about asteroids
   as I user
   I want to be able to search for asteroids based on dates
 

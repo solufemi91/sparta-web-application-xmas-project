@@ -4,6 +4,7 @@ require_relative '../lib/pages/resource_new_page'
 require_relative '../lib/pages/resource_show_page'
 require_relative '../lib/pages/resource_edit_page'
 require_relative '../lib/pages/feed_results_page'
+require_relative '../lib/pages/lookup_results_page'
 
 
 module MySite
@@ -30,6 +31,10 @@ module MySite
 
   def feed_results
     FeedResultsPage.new
+  end
+
+  def lookup_results
+    LookupResultsPage.new
   end
 
 
