@@ -9,6 +9,3 @@ class RandomAsteroidId
   end
 
 end
-
-# x = RandomAsteroidId.new
-# puts x.get_random_asteroid_by_id

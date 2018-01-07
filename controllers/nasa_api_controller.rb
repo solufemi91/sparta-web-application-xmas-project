@@ -17,14 +17,14 @@ class NasaApiController < Sinatra::Base
   end
 
   get "/results/lookup" do
-    @title = "Results"
+    @title = "Lookup"
     @lookup = GetLookup.new
     @results = @lookup.get_info_of_specific_neo(id)
     erb :'nasa_api/lookup'
   end
 
   get '/results/feed' do
-    @title = "feed"
+    @title = "Feed"
     @feed = GetSpecifiedRange.new
     @feed.get_specified_range(startDate,endDate)
     erb :'nasa_api/feed'
