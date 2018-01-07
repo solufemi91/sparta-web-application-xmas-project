@@ -14,9 +14,9 @@ describe 'SpaceObjectsController' do
       expect(last_response.body).to include("Welcome to the SpaceObjects Page!")
     end
 
-    it "displays single page for the resource" do
-      get '/1'
-      expect(last_response.body).to include("id est laborum")
+    it "displays the show page for the resource" do
+      get '/4'
+      expect(last_response.body).to include("Mercury completes three rotations")
     end
 
 
@@ -30,6 +30,9 @@ describe 'SpaceObjectsController' do
       get '/1/edit'
       expect(last_response.body).to include("The edit space objects form")
     end
+
+    
+
 
 
 
