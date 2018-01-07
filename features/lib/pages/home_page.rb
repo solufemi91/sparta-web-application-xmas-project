@@ -7,7 +7,7 @@ class ProjectHomePage
   END_DATE_FIELD = 'end_date_field' unless const_defined?(:END_DATE_FIELD)
   FEED_SEARCH_BUTTON = 'feed_search_button'  unless const_defined?(:FEED_SEARCH_BUTTON)
   ASTEROID_ID_FIELD = 'asteroid_id_field' unless const_defined?(:ASTEROID_ID_FIELD)
-  FORM_SEARCH_BUTTON = 'form_search_button'
+  FORM_SEARCH_BUTTON = 'form_search_button' unless const_defined?(:FORM_SEARCH_BUTTON)
 
   def visit_home_page
     visit('/')

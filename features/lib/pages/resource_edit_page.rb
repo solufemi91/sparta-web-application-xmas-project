@@ -12,6 +12,10 @@ class ResourceEditPage
     visit('/1')
   end
 
+  def visit_mercury
+    visit('/4')
+  end
+
   def get_edit_title_field
     find_field(:id, EDIT_TITLE_FIELD)
   end
