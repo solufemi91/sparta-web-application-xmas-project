@@ -3,7 +3,7 @@ require 'capybara'
 class FeedResultsPage
   include Capybara::DSL
 
-  DATE_TITLE_ASTEROID_FEED = 'date_title_asteroid_feed'
+  DATE_TITLE_ASTEROID_FEED = 'date_title_asteroid_feed'  unless const_defined?(:DATE_TITLE_ASTEROID_FEED)
 
   def find_all_date_title_for_feed
     all('.date_title_asteroid_feed')

@@ -134,73 +134,73 @@
   </tr>
 </table>
 
-<% if singleElement['close_approach_data'].empty? == false %>
-
-<h4>Close approach data for <%= singleElement['neo_reference_id'] %> </h4>
-<table>
-  <tr>
-    <th>attribute</th>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <th>data for <%= element['close_approach_date'] %></th>
-    <% end %>
-  </tr>
-  <tr>
-    <td>epoch date close approach</td>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <td><%= element['epoch_date_close_approach'] %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>relative velocity, kilometers per second</td>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <td><%= element['relative_velocity']['kilometers_per_second'] %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>relative velocity, kilometers per hour</td>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <td><%= element['relative_velocity']['kilometers_per_hour'] %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>relative velocity, miles per hour</td>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <td><%= element['relative_velocity']['miles_per_hour'] %></td>
-    <% end %>
-
-  </tr>
-  <tr>
-    <td>miss distance, astronomical</td>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <td><%= element['miss_distance']['astronomical'] %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>miss distance, lunar</td>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <td><%= element['miss_distance']['lunar'] %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>miss distance, kilometers</td>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <td><%= element['miss_distance']['kilometers'] %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>miss distance, miles</td>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <td><%= element['miss_distance']['miles'] %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>orbiting body</td>
-    <% singleElement['close_approach_data'].each do |element| %>
-      <td><%= element['orbiting_body'] %></td>
-    <% end %>
-  </tr>
-
-
-</table>
-  <% end %>
+<!-- # <% if singleElement['close_approach_data'].empty? == false %>
+#
+# <h4>Close approach data for <%= singleElement['neo_reference_id'] %> </h4>
+# <table>
+#   <tr>
+#     <th>attribute</th>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <th>data for <%= element['close_approach_date'] %></th>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>epoch date close approach</td>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <td><%= element['epoch_date_close_approach'] %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>relative velocity, kilometers per second</td>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <td><%= element['relative_velocity']['kilometers_per_second'] %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>relative velocity, kilometers per hour</td>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <td><%= element['relative_velocity']['kilometers_per_hour'] %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>relative velocity, miles per hour</td>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <td><%= element['relative_velocity']['miles_per_hour'] %></td>
+#     <% end %>
+#
+#   </tr>
+#   <tr>
+#     <td>miss distance, astronomical</td>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <td><%= element['miss_distance']['astronomical'] %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>miss distance, lunar</td>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <td><%= element['miss_distance']['lunar'] %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>miss distance, kilometers</td>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <td><%= element['miss_distance']['kilometers'] %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>miss distance, miles</td>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <td><%= element['miss_distance']['miles'] %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>orbiting body</td>
+#     <% singleElement['close_approach_data'].each do |element| %>
+#       <td><%= element['orbiting_body'] %></td>
+#     <% end %>
+#   </tr>
+#
+#
+# </table>
+#   <% end %> -->
 <% end %>

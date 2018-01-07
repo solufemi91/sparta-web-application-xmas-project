@@ -100,6 +100,10 @@ img {
   text-align: center;
 }
 
+.date_title_asteroid_feed_main {
+  text-align: center;
+}
+
 #date_range_title {
   text-align: center;
 }
@@ -133,4 +137,5 @@ img {
 .space_object_images {
   width: 103px;
   height: 103px;
+  border-radius: 4px;
 }

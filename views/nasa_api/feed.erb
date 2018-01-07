@@ -10,7 +10,7 @@
 
 
  <% keys2.each do |date|%>
- <h3 class="date_title_asteroid_feed">Asteroids with a close approach date of: <%= date %></h3>
+ <h3 class="date_title_asteroid_feed_main">Asteroids with a close approach date of: <p class="date_title_asteroid_feed"> <%= date %> </p></h3>
  <% @neo[date].each do |singleElement|%>
   <div class="asteroid_tables_div">
     <h4 class="asteroid_name_title">Asteroid name: <%= singleElement['name'] %></h4>
