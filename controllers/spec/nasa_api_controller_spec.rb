@@ -11,7 +11,7 @@ describe 'NasaApiController' do
 
     it "displays index page for the api" do
       get '/'
-      expect(last_response.body).to include("Search for an Asteroid by id")
+      expect(last_response.body).to include("Search for an asteroid by id")
     end
 
     it "displays browse results page for the api" do
@@ -28,10 +28,6 @@ describe 'NasaApiController' do
       get '/results/feed'
       expect(last_response.body).to include("Asteroids with a close approach date of")
     end
-
-
-
-
 
   end
 end

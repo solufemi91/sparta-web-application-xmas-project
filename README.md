@@ -39,6 +39,14 @@ post '/lookup' do
 end
 ```
 
+So as a solution, what I did was defined the global variables with valid dates and ids:
+
+``` id = '2153306'
+startDate = '2017-01-10'
+endDate = '2017-01-15'
+```
+
+
 For my GUI tests. I was also unsure how to test if a image was displayed when the user edited or created a new post. I though the ```.visible?``` method would be the solution. However this method still returns true despite no image being shown. I believe its because the method only checks that the image tag is displayed, not necessarily if the image shows up.
 
 ## What went well

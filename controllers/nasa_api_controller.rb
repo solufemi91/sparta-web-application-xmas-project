@@ -8,9 +8,9 @@ class NasaApiController < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  id = 0
-  startDate = 0
-  endDate = 0
+  id = '2153306'
+  startDate = '2017-01-10'
+  endDate = '2017-01-15'
 
   get '/' do
     erb :'nasa_api/index'

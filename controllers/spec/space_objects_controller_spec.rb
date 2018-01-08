@@ -31,7 +31,7 @@ describe 'SpaceObjectsController' do
       expect(last_response.body).to include("The edit space objects form")
     end
 
-    
+
 
 
 
