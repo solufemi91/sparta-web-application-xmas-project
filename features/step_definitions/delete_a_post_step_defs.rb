@@ -1,6 +1,6 @@
 Given ("I am on the my home page") do
   my_homepage.visit_home_page
-
+  sleep 2
 end
 
 And("I have clicked the link to the resource index")do

@@ -1,11 +1,11 @@
 Given ("I am on the my home page") do
   my_homepage.visit_home_page
-
+  sleep 2
 end
 
 When("I click a link to create a new post") do
   resource_index.click_link_to_new_post
-
+  sleep 2
 end
 
 And("I have completed all the neccesary fields") do
