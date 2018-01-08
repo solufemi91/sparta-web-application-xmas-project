@@ -55,6 +55,11 @@ I was happy that I was able to extract all the needed information from the API, 
 
 ## How to run the web application
 
+First of all, go to: https://github.com/solufemi91/sparta-web-application-xmas-project  and copy the link to the directory. Then in the terminal run the following command: ``` git clone git@github.com:solufemi91/sparta-web-application-xmas-project.git ```
+
+Next change in that directory by executing: ``` cd sparta-web-application-xmas-project```
+
+
 In order to install the following gems:
 
 ```
@@ -66,3 +71,7 @@ gem 'rack-test'
 gem 'capybara'
 
 ```
+
+Execute the following command ``` bundle install ```. At this point, the computer will be ready to operate as a server.
+
+To run the server, type in ``` rackup ``` in the terminal. Then go to your browser and type in : ```http://localhost:9292/``` Then the application can be accessed.
