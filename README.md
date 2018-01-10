@@ -12,6 +12,42 @@ We would expect it to be fully automated Unit, API and front end tested as part 
 *Note* - The main focus of this project is to show off your SDET skills and what you can do
 
 
+## How to run the web application
+
+First of all, go to: https://github.com/solufemi91/sparta-web-application-xmas-project  and copy the link to the directory. Then in the terminal run the following command: ``` git clone git@github.com:solufemi91/sparta-web-application-xmas-project.git ```
+
+Next change in that directory by executing: ``` cd sparta-web-application-xmas-project```
+
+
+In order to install the following gems:
+
+```
+
+gem "sinatra"
+gem "rack"
+gem 'rspec'
+gem 'rack-test'
+gem 'capybara'
+
+```
+
+Execute the following command ``` bundle install ```. At this point, the computer will be ready to operate as a server.
+
+To run the server, type in ``` rackup ``` in the terminal. Then go to your browser and type in : ```http://localhost:9292/``` Then the application can be accessed.
+
+
+## How to run tests
+
+In order to test the service object model, run the following command from the root directory: ``` rspec ```.
+
+The results of the test shall be displayed in the terminal. If the text is higlighted in green, it means the tests have passed.
+
+In order to test the controller, you must be in the controller directory. To do this, run the following command: ```cd controllers```. Once this is done, you can once again run ```rspec ```
+
+Lastly, in order to run the GUI tests, run the command: ```cucumber``` from the main directory.
+
+
+
 ## What I found difficult
 
 Firstly regarding the service object model, I initially struggled with how to extract certain information. This was due to how it was stored. Some key values where stored within multiple hashes and then arrays. This task was made even harder because I had to figure out how to get this information in the most effcient way for multiple sets of data. So I spent sometime trying to figure out the best way to use the ```.each``` method alongside the ```.push``` method.
@@ -51,27 +87,3 @@ For my GUI tests. I was also unsure how to test if a image was displayed when th
 ## What went well
 
 I was happy that I was able to extract all the needed information from the API, that all the restful routes for my application was working correctly.
-
-
-## How to run the web application
-
-First of all, go to: https://github.com/solufemi91/sparta-web-application-xmas-project  and copy the link to the directory. Then in the terminal run the following command: ``` git clone git@github.com:solufemi91/sparta-web-application-xmas-project.git ```
-
-Next change in that directory by executing: ``` cd sparta-web-application-xmas-project```
-
-
-In order to install the following gems:
-
-```
-
-gem "sinatra"
-gem "rack"
-gem 'rspec'
-gem 'rack-test'
-gem 'capybara'
-
-```
-
-Execute the following command ``` bundle install ```. At this point, the computer will be ready to operate as a server.
-
-To run the server, type in ``` rackup ``` in the terminal. Then go to your browser and type in : ```http://localhost:9292/``` Then the application can be accessed.
