@@ -4,9 +4,9 @@ class NasaApiController < Sinatra::Base
 
   set :views, Proc.new { File.join(root, "views") }
 
-  configure :development do
-    register Sinatra::Reloader
-  end
+  # configure :development do
+  #   register Sinatra::Reloader
+  # end
 
   id = '2153306'
   startDate = '2017-01-10'

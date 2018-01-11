@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader' if development?
+# require 'sinatra/reloader' if development?
 require 'pg'
 require 'http'
 require_relative './controllers/nasa_api_controller'
