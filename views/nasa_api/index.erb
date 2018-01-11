@@ -1,0 +1,37 @@
+<h1 id="resource_index_title">Welcome to the Asteroid Data Page!</h1>
+
+
+<div class="index_form_containers">
+  <h1 class="titles_index_page">Search for feed of asteroids</h1>
+  <form id="feed_form"action="/feed" method="POST">
+    <div>
+      <label id="start_date_label" >Start Date</label>
+      <input id='start_date_field' type="text" name="start" placeholder="YYYY-MM-DD" value=" ">
+      <label>End Date</label>
+      <input id='end_date_field' type="text" name="end" placeholder="YYYY-MM-DD" value=" ">
+    </div>
+    <input id="feed_search_button" type="submit" value="Search">
+  </form>
+</div>
+
+<div class="index_form_containers">
+  <h1 class="titles_index_page">Search for an asteroid by id</h1>
+  <form id="lookup_form" action="/lookup" method="POST">
+    <div>
+      <label id ="asteroid_id_label" >Astroid Id</label>
+      <input id="asteroid_id_field" type="text" name="title" placeholder="Enter an asteroid id" value=" ">
+    </div>
+    <input id="form_search_button" type="submit" value="Search">
+
+  </form>
+</div>
+
+
+<div class="index_form_containers">
+  <h1 id="browse_title_index_page" class="titles_index_page">Press search to get all asteroids</h1>
+  <form id="browse_form" action="/browse" method="POST">
+    <div>
+      <input id="browse_search_button" type="submit" value="Search">
+    </div>
+  </form>
+</div>

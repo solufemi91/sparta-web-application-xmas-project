@@ -1,0 +1,117 @@
+<% @neo = @feed.get_near_earth_objects %>
+
+<% keys = @neo.keys %>
+<% keys2 = keys.sort %>
+
+<h2 id="date_range_title">Date range: <%= keys2.first %> to <%= keys2.last %> </h2>
+
+
+<h2 id="number_of_asteroids_title">Number of Asteroids displayed: <%= @feed.get_element_count %></h2>
+
+
+ <% keys2.each do |date|%>
+ <h3 class="date_title_asteroid_feed_main">Asteroids with a close approach date of: <p class="date_title_asteroid_feed"> <%= date %> </p></h3>
+ <% @neo[date].each do |singleElement|%>
+  <div class="asteroid_tables_div">
+    <h4 class="asteroid_name_title">Asteroid name: <%= singleElement['name'] %></h4>
+    <table class="asteroid_tables">
+      <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Link to data in JSON format</td>
+        <td class="results_value"><a href="<%= singleElement['links']['self']%>"><%= singleElement['links']['self']%></a></td>
+      </tr>
+      <tr>
+        <td>Asteroid ID</td>
+        <td class="results_value"><%= singleElement['neo_reference_id']%></td>
+      </tr>
+      <tr>
+        <td>Link to Nasa JPL URL</td>
+        <td class="results_value"><a href="<%=singleElement['nasa_jpl_url']%>"><%= singleElement['nasa_jpl_url']%></a></td>
+      </tr>
+      <tr>
+        <td>Absolute Magnitude H</td>
+        <td class="results_value"><%= singleElement['absolute_magnitude_h']%></td>
+      </tr>
+      <tr>
+        <td>Estimated minimum diameter in kilometers</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['kilometers']['estimated_diameter_min']%></td>
+      </tr>
+      <tr>
+        <td>Estimated maximum diameter in kilometers</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['kilometers']['estimated_diameter_max']%></td>
+      </tr>
+      <tr>
+        <td>Estimated minimum diameter in meters</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['meters']['estimated_diameter_min']%></td>
+      </tr>
+      <tr>
+        <td>Estimated maximum diameter in meters</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['meters']['estimated_diameter_max']%></td>
+      </tr>
+      <tr>
+        <td>Estimated minimum diameter in miles</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['miles']['estimated_diameter_min']%></td>
+      </tr>
+      <tr>
+        <td>Estimated maximum diameter in miles</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['miles']['estimated_diameter_max']%></td>
+      </tr>
+      <tr>
+        <td>Estimated minimum diameter in feet</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['feet']['estimated_diameter_min']%></td>
+      </tr>
+      <tr>
+        <td>Estimated maximum diameter in feet</td>
+        <td class="results_value"><%= singleElement['estimated_diameter']['feet']['estimated_diameter_max']%></td>
+      </tr>
+      <tr>
+        <td>Is potentially hazardous asteroid?</td>
+        <td class="results_value"><%= singleElement['is_potentially_hazardous_asteroid']%></td>
+      </tr>
+      <tr>
+        <td>Close approach date</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['close_approach_date']%></td>
+      </tr>
+      <tr>
+        <td>Epoch date close approach</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['epoch_date_close_approach']%></td>
+      </tr>
+      <tr>
+        <td>Relative velocity, kilometers per second</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['relative_velocity']['kilometers_per_second']%></td>
+      </tr>
+      <tr>
+        <td>Relative velocity, kilometers per hour</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['relative_velocity']['kilometers_per_hour']%></td>
+      </tr>
+      <tr>
+        <td>Relative velocity, miles per hour</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['relative_velocity']['miles_per_hour']%></td>
+      </tr>
+      <tr>
+        <td>Miss distance, astronomical</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['miss_distance']['astronomical']%></td>
+      </tr>
+      <tr>
+        <td>Miss distance, lunar</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['miss_distance']['lunar']%></td>
+      </tr>
+      <tr>
+        <td>Miss distance, kilometers</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['miss_distance']['kilometers']%></td>
+      </tr>
+      <tr>
+        <td>Miss distance, miles</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['miss_distance']['miles']%></td>
+      </tr>
+      <tr>
+        <td>Orbiting body</td>
+        <td class="results_value"><%= singleElement['close_approach_data'][0]['orbiting_body']%></td>
+      </tr>
+    </table>
+  </div>
+  <% end %>
+ <% end %>

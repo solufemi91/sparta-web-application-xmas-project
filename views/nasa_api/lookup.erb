@@ -1,0 +1,197 @@
+<h1 id="asteroid_name_title_lookup">Name of asteroid searched: <%= @results['name'] %></h1>
+
+
+
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Values</th>
+  </tr>
+
+  <tr>
+    <td>Link to data in JSON format</td>
+    <td class="results_value"><a href="<%= @lookup.get_links_self_key_value %>"><%= @lookup.get_links_self_key_value %></a></td>
+  </tr>
+  <tr>
+    <td>Neo reference id</td>
+    <td class="results_value" id="neo_reference_id_lookup_value"><%= @lookup.get_neo_reference_id_key_value %></td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td class="results_value"><%= @lookup.get_name_key_value %></td>
+  </tr>
+  <tr>
+    <td>Link to Nasa JPL URL</td>
+    <td class="results_value"><a href="<%= @lookup.get_nasa_jpl_url_key_value %>"> <%= @lookup.get_nasa_jpl_url_key_value%></a></td>
+  </tr>
+  <tr>
+    <td>Absolute magnitude H</td>
+    <td class="results_value"><%= @lookup.get_absolute_magnitude_h_key_value%></td>
+  </tr>
+  <tr>
+    <td>Estimated minimum diameter in kilometers</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_kilometers_min_key_value%></td>
+  </tr>
+  <tr>
+    <td class="results_value">Estimated maximum diameter in kilometers</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_kilometers_max_key_value%></td>
+  </tr>
+  <tr>
+    <td>Estimated minimum diameter in meters</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_meters_min_key_value%></td>
+  </tr>
+  <tr>
+    <td>Estimated maximum diameter in meters</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_meters_max_key_value%></td>
+  </tr>
+  <tr>
+    <td>Estimated minimum diameter in miles</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_miles_min_key_value%></td>
+  </tr>
+  <tr>
+    <td>Estimated maximum diameter in miles</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_miles_max_key_value%></td>
+  </tr>
+  <tr>
+    <td>Estimated minimum diameter in feet</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_feet_min_key_value%></td>
+  </tr>
+  <tr>
+    <td>Estimated maximum diameter in feet</td>
+    <td class="results_value"><%= @lookup.get_estimated_diameter_feet_max_key_value%></td>
+  </tr>
+  <tr>
+    <td>Potentially hazardous asteroid?</td>
+    <td class="results_value"><%= @lookup.get_is_potentially_hazardous_asteroid_key_value%></td>
+  </tr>
+  <tr>
+    <td>Orbit id</td>
+    <td class="results_value"><%= @lookup.get_orbit_id%></td>
+  </tr>
+  <tr>
+    <td>Orbit determination date</td>
+    <td class="results_value"><%= @lookup.get_orbit_determination_date%></td>
+  </tr>
+  <tr>
+    <td>Orbit uncertainty</td>
+    <td class="results_value"><%= @lookup.get_orbit_uncertainty%></td>
+  </tr>
+  <tr>
+    <td>Minimum orbit intersection</td>
+    <td class="results_value"><%= @lookup.get_minimum_orbit_intersection%></td>
+  </tr>
+  <tr>
+    <td>Jupiter tisserand invariant</td>
+    <td class="results_value"><%= @lookup.get_jupiter_tisserand_invariant%></td>
+  </tr>
+  <tr>
+    <td>Epoch osculation</td>
+    <td class="results_value"><%= @lookup.get_epoch_osculation%></td>
+  </tr>
+  <tr>
+    <td>Eccentricity</td>
+    <td class="results_value"><%= @lookup.get_eccentricity%></td>
+  </tr>
+  <tr>
+    <td>Semi major axis</td>
+    <td class="results_value"><%= @lookup.get_semi_major_axis%></td>
+  </tr>
+  <tr>
+    <td>Inclination</td>
+    <td class="results_value"><%= @lookup.get_inclination%></td>
+  </tr>
+  <tr>
+    <td>Orbital period</td>
+    <td class="results_value"><%= @lookup.get_orbital_period%></td>
+  </tr>
+  <tr>
+    <td>Perihelion distance</td>
+    <td class="results_value"><%= @lookup.get_perihelion_distance%></td>
+  </tr>
+  <tr>
+    <td>Perihelion argument</td>
+    <td class="results_value"><%= @lookup.get_perihelion_argument%></td>
+  </tr>
+  <tr>
+    <td>Aphelion distance</td>
+    <td class="results_value"><%= @lookup.get_aphelion_distance%></td>
+  </tr>
+  <tr>
+    <td>Perihelion time</td>
+    <td class="results_value"><%= @lookup.get_perihelion_time%></td>
+  </tr>
+  <tr>
+    <td>Mean anomaly</td>
+    <td class="results_value"><%= @lookup.get_mean_anomaly%></td>
+  </tr>
+  <tr>
+    <td>Mean motion</td>
+    <td class="results_value"><%= @lookup.get_mean_motion%></td>
+  </tr>
+  <tr>
+    <td>Equinox</td>
+    <td class="results_value"><%= @lookup.get_equinox%></td>
+  </tr>
+
+
+</table>
+
+<!-- # <% if @lookup.get_close_approach_data_key_value.empty? == false %>
+# <h2>Close approach data</h2>
+# <table>
+#   <tr>
+#     <th>Attribute</th>
+#     <% @lookup.get_all_close_approach_dates.each do |element|%>
+#     <th>Data for <%= element %></th>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all epoch date close approaches</td>
+#     <% @lookup.get_all_epoch_date_close_approaches.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all relative velocitykps</td>
+#     <% @lookup.get_all_relative_velocity_kps.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all relative velocity mphs</td>
+#     <% @lookup.get_all_relative_velocity_mphs.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all miss distance astronomicals</td>
+#     <% @lookup.get_all_miss_distance_astronomicals.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all miss distance lunars</td>
+#     <% @lookup.get_all_miss_distance_lunars.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all miss distance kilometers</td>
+#     <% @lookup.get_all_miss_distance_kilometers.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all miss distance miles</td>
+#     <% @lookup.get_all_miss_distance_miles.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+#   <tr>
+#     <td>all orbiting bodies</td>
+#     <% @lookup.get_all_orbiting_bodies.each do |element|%>
+#     <td><%= element %></td>
+#     <% end %>
+#   </tr>
+# </table>
+# <% end %> -->
