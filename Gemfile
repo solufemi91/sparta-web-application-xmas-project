@@ -6,4 +6,5 @@ gem "rack"
 gem 'rspec'
 gem 'rack-test'
 gem 'capybara'
+gem 'pg'
 ruby '2.3.4'
